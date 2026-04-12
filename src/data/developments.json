@@ -1,0 +1,1197 @@
+[
+  {
+    "name": "Shalford Lodge",
+    "slug": "shalford-lodge",
+    "location": "Kingston Hill, Kingston upon Thames",
+    "status": "Taking Reservations",
+    "total": 13,
+    "types": "2 & 3 bedroom apartments",
+    "priceRange": "From £595,000",
+    "sizeRange": "753 - 1,776 sq ft",
+    "description": "A superb development of thirteen two and three bedroom luxury apartments in a highly desirable location overlooking the spectacular Richmond Park. Each of these stunning new homes will be finished to the highest standard throughout with a specification others can only envy. All Kidbrook Homes are designed for their unique location and to ensure long term enjoyment for each and every one of our customers.",
+    "imageDir": "shalford-lodge",
+    "isCurrent": true,
+    "plots": [
+      {
+        "plot": 1, "name": "Apartment 1", "type": "3 bed, 2 bath & 1 guest WC", "size": "1,776 sq ft", "status": "1,250,000",
+        "floor": "Ground Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Dining", "dimensionsMetric": "7249 x 4336", "dimensionsImperial": "23'10\" x 14'3\""},
+          {"room": "Living", "dimensionsMetric": "6560 x 4806", "dimensionsImperial": "21'7\" x 15'10\""},
+          {"room": "Hall", "dimensionsMetric": "4649 x 2129", "dimensionsImperial": "15'3\" x 7'0\""},
+          {"room": "Hall", "dimensionsMetric": "5064 x 1290", "dimensionsImperial": "16'8\" x 4'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4901 x 4004", "dimensionsImperial": "16'1\" x 13'2\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4806 x 4395", "dimensionsImperial": "15'10\" x 14'5\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4806 x 2764", "dimensionsImperial": "15'10\" x 9'1\""}
+        ],
+        "features": ["Private Garden", "Utility Room"]
+      },
+      {
+        "plot": 2, "name": "Apartment 2", "type": "2 bed, 2 bath & 1 guest WC", "size": "1,216 sq ft", "status": "900,000",
+        "floor": "Ground Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Living", "dimensionsMetric": "8096 x 6553", "dimensionsImperial": "26'7\" x 21'6\""},
+          {"room": "Hall", "dimensionsMetric": "6264 x 1557", "dimensionsImperial": "20'7\" x 5'2\""},
+          {"room": "Hall", "dimensionsMetric": "3160 x 1561", "dimensionsImperial": "10'5\" x 5'2\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5787 x 3025", "dimensionsImperial": "19'0\" x 9'11\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "2847 x 2842", "dimensionsImperial": "9'4\" x 9'4\""}
+        ],
+        "features": ["Dressing Room", "Private Garden"]
+      },
+      {
+        "plot": 3, "name": "Apartment 3", "type": "3 bed, 3 bath", "size": "1,335 sq ft", "status": "1,000,000",
+        "floor": "Ground Floor", "bedrooms": 3, "bathrooms": 3,
+        "rooms": [
+          {"room": "Kitchen/Living", "dimensionsMetric": "8097 x 4539", "dimensionsImperial": "26'7\" x 14'11\""},
+          {"room": "Dining", "dimensionsMetric": "3686 x 3310", "dimensionsImperial": "12'1\" x 10'11\""},
+          {"room": "Hall", "dimensionsMetric": "8425 x 1555", "dimensionsImperial": "27'8\" x 5'1\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3645 x 3134", "dimensionsImperial": "12'0\" x 10'4\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4146 x 2946", "dimensionsImperial": "13'8\" x 9'8\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4146 x 2795", "dimensionsImperial": "13'8\" x 9'2\""}
+        ],
+        "features": ["Utility Room"]
+      },
+      {
+        "plot": 4, "name": "Apartment 4", "type": "3 bed, 2 bath & 1 guest WC", "size": "1,599 sq ft", "status": "Price on application",
+        "floor": "Ground Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Dining", "dimensionsMetric": "7590 x 3831", "dimensionsImperial": "24'11\" x 12'7\""},
+          {"room": "Living", "dimensionsMetric": "6175 x 4475", "dimensionsImperial": "14'10\" x 14'9\""},
+          {"room": "Hall", "dimensionsMetric": "4505 x 2396", "dimensionsImperial": "14'10\" x 7'11\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3402 x 3196", "dimensionsImperial": "11'2\" x 10'6\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4865 x 2846", "dimensionsImperial": "16'0\" x 9'4\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4865 x 2829", "dimensionsImperial": "16'0\" x 9'4\""}
+        ],
+        "features": ["Utility Room"]
+      },
+      {
+        "plot": 5, "name": "Apartment 5", "type": "2 bed, 2 bath", "size": "1,216 sq ft", "status": "Price on application",
+        "floor": "First Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen", "dimensionsMetric": "3480 x 3313", "dimensionsImperial": "11'5\" x 10'11\""},
+          {"room": "Living", "dimensionsMetric": "6548 x 5022", "dimensionsImperial": "21'6\" x 16'6\""},
+          {"room": "Hall", "dimensionsMetric": "8940 x 1319", "dimensionsImperial": "29'4\" x 4'4\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3755 x 3250", "dimensionsImperial": "12'4\" x 10'8\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "3947 x 3340", "dimensionsImperial": "13'0\" x 11'0\""}
+        ],
+        "features": ["Dressing Room", "Terrace"]
+      },
+      {
+        "plot": 6, "name": "Apartment 6", "type": "2 bed, 2 bath", "size": "786 sq ft", "status": "Price on application",
+        "floor": "First Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Living", "dimensionsMetric": "5883 x 4509", "dimensionsImperial": "19'4\" x 14'2\""},
+          {"room": "Hall", "dimensionsMetric": "7181 x 1095", "dimensionsImperial": "23'7\" x 3'7\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3049 x 3023", "dimensionsImperial": "10'0\" x 9'11\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4187 x 2772", "dimensionsImperial": "13'9\" x 9'1\""}
+        ],
+        "features": ["Terrace"]
+      },
+      {
+        "plot": 7, "name": "Apartment 7", "type": "2 bed, 2 bath", "size": "861 sq ft", "status": "Price on application",
+        "floor": "First Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Living", "dimensionsMetric": "5860 x 5253", "dimensionsImperial": "19'3\" x 17'3\""},
+          {"room": "Hall", "dimensionsMetric": "8095 x 1350", "dimensionsImperial": "26'7\" x 4'5\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3803 x 2829", "dimensionsImperial": "12'6\" x 9'6\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "3803 x 3350", "dimensionsImperial": "12'6\" x 11'0\""}
+        ],
+        "features": []
+      },
+      {
+        "plot": 8, "name": "Apartment 8", "type": "3 bed, 3 bath", "size": "1,270 sq ft", "status": "Price on application",
+        "floor": "First Floor", "bedrooms": 3, "bathrooms": 3,
+        "rooms": [
+          {"room": "Kitchen/Dining", "dimensionsMetric": "4339 x 4410", "dimensionsImperial": "14'11\" x 14'6\""},
+          {"room": "Living/Dining", "dimensionsMetric": "7849 x 3686", "dimensionsImperial": "25'9\" x 12'1\""},
+          {"room": "Hall", "dimensionsMetric": "8425 x 1554", "dimensionsImperial": "27'8\" x 5'1\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3134 x 2998", "dimensionsImperial": "10'4\" x 9'10\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "2946 x 2852", "dimensionsImperial": "9'8\" x 9'5\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4145 x 2795", "dimensionsImperial": "13'8\" x 9'2\""}
+        ],
+        "features": []
+      },
+      {
+        "plot": 9, "name": "Apartment 9", "type": "3 bed, 2 bath & 1 guest WC", "size": "1,582 sq ft", "status": "Price on application",
+        "floor": "First Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Dining", "dimensionsMetric": "7589 x 3831", "dimensionsImperial": "24'11\" x 12'7\""},
+          {"room": "Living", "dimensionsMetric": "5324 x 4475", "dimensionsImperial": "17'6\" x 14'9\""},
+          {"room": "Hall", "dimensionsMetric": "7100 x 2346", "dimensionsImperial": "23'4\" x 7'9\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3402 x 3191", "dimensionsImperial": "11'2\" x 10'6\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4865 x 2829", "dimensionsImperial": "16'0\" x 9'3\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4865 x 2846", "dimensionsImperial": "16'0\" x 9'4\""}
+        ],
+        "features": ["Dressing Room"]
+      },
+      {
+        "plot": 10, "name": "Apartment 10", "type": "3 bed, 2 bath & 1 guest WC", "size": "1,776 sq ft", "status": "Price on application",
+        "floor": "Second Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Dining", "dimensionsMetric": "7249 x 3563", "dimensionsImperial": "23'10\" x 11'9\""},
+          {"room": "Living", "dimensionsMetric": "6725 x 4805", "dimensionsImperial": "22'1\" x 15'10\""},
+          {"room": "Hall", "dimensionsMetric": "7149 x 1372", "dimensionsImperial": "23'6\" x 4'6\""},
+          {"room": "Hall", "dimensionsMetric": "4540 x 1290", "dimensionsImperial": "14'11\" x 4'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4009 x 3746", "dimensionsImperial": "13'2\" x 12'4\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4806 x 3246", "dimensionsImperial": "15'10\" x 10'8\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4805 x 2764", "dimensionsImperial": "15'10\" x 9'1\""}
+        ],
+        "features": ["Terrace", "Lobby"]
+      },
+      {
+        "plot": 11, "name": "Apartment 11", "type": "2 bed, 2 bath", "size": "753 sq ft", "status": "595,000",
+        "floor": "Second Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen/Living", "dimensionsMetric": "5865 x 4603", "dimensionsImperial": "19'3\" x 15'2\""},
+          {"room": "Hall", "dimensionsMetric": "7448 x 1250", "dimensionsImperial": "24'6\" x 4'1\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3253 x 2862", "dimensionsImperial": "10'8\" x 9'5\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "3446 x 3253", "dimensionsImperial": "11'4\" x 10'8\""}
+        ],
+        "features": ["Terrace"]
+      },
+      {
+        "plot": 12, "name": "Apartment 12", "type": "3 bed, 3 bath", "size": "1,163 sq ft", "status": "Price on application",
+        "floor": "Second Floor", "bedrooms": 3, "bathrooms": 3,
+        "rooms": [
+          {"room": "Kitchen/Living", "dimensionsMetric": "7446 x 4104", "dimensionsImperial": "24'6\" x 13'6\""},
+          {"room": "Dining", "dimensionsMetric": "3285 x 3094", "dimensionsImperial": "10'10\" x 10'2\""},
+          {"room": "Hall", "dimensionsMetric": "8680 x 1154", "dimensionsImperial": "28'6\" x 3'10\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4211 x 2985", "dimensionsImperial": "13'10\" x 9'10\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4061 x 2927", "dimensionsImperial": "13'4\" x 9'8\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "3361 x 2849", "dimensionsImperial": "11'1\" x 9'5\""}
+        ],
+        "features": ["Terrace"]
+      },
+      {
+        "plot": 13, "name": "Apartment 13", "type": "3 bed, 3 bath", "size": "1,550 sq ft", "status": "Price on application",
+        "floor": "Second Floor", "bedrooms": 3, "bathrooms": 3,
+        "rooms": [
+          {"room": "Kitchen/Dining", "dimensionsMetric": "6874 x 4130", "dimensionsImperial": "22'7\" x 13'7\""},
+          {"room": "Living", "dimensionsMetric": "5971 x 3855", "dimensionsImperial": "19'7\" x 12'8\""},
+          {"room": "Study", "dimensionsMetric": "4265 x 3339", "dimensionsImperial": "14'0\" x 11'0\""},
+          {"room": "Hall", "dimensionsMetric": "7095 x 1947", "dimensionsImperial": "23'4\" x 5'5\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "3415 x 3071", "dimensionsImperial": "11'3\" x 10'1\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4314 x 2953", "dimensionsImperial": "14'2\" x 9'9\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4315 x 2836", "dimensionsImperial": "14'2\" x 9'4\""}
+        ],
+        "features": ["Dressing Room", "Terrace"]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where is Shalford Lodge?",
+        "answer": "Shalford Lodge is located on Kingston Hill, Kingston upon Thames -- one of London's most prestigious residential addresses. Kingston Hill offers excellent access to Richmond Park, Kingston town centre, and Central London via the A3 and rail connections from Surbiton and Kingston stations."
+      },
+      {
+        "question": "How many apartments are at Shalford Lodge?",
+        "answer": "Shalford Lodge comprises 13 luxury apartments, ranging from 2-bedroom to 3-bedroom configurations. Sizes range from 753 to 1,776 square feet."
+      },
+      {
+        "question": "What are the prices at Shalford Lodge, Kingston Hill?",
+        "answer": "Prices at Shalford Lodge start from £595,000 for a 2-bedroom apartment, up to £1,250,000 for the largest 3-bedroom apartments. Several plots are currently available -- contact us for the latest availability."
+      },
+      {
+        "question": "What transport links are near Shalford Lodge?",
+        "answer": "Kingston Hill is well-connected to Central London. Norbiton station (Zone 6, South Western Railway) is nearby, with trains to London Waterloo in approximately 30 minutes. Kingston town centre and the A3 are both easily accessible."
+      }
+    ],
+    "specification": [
+      {
+        "title": "Kitchen",
+        "items": [
+          "Silestone worktop and upstands",
+          "Siemens steam oven in selected plots",
+          "Extractor canopy in selected plots",
+          "Bosch washing machine in selected plots",
+          "Washer/dryer in selected plots",
+          "Bosch tumble dryer in utility in selected plots",
+          "Silestone worktop to utility",
+          "Wine chiller in selected plots",
+          "4 in 1 Qettle tap"
+        ]
+      },
+      {
+        "title": "Bathrooms & En Suites",
+        "items": [
+          "Designer sanitaryware by Roca",
+          "Exceptional chrome fittings by Hansgrohe",
+          "Designer floor and wall tiling by Porcelanosa",
+          "Contemporary chrome towel radiators",
+          "Full-height tiling around shower enclosure",
+          "Mirror fully fitted",
+          "Shaver point fully fitted",
+          "Thermostatically-controlled Hansgrohe shower"
+        ]
+      },
+      {
+        "title": "Electrical",
+        "items": [
+          "LED downlighters",
+          "Pendants to bedrooms",
+          "Mains smoke alarm with battery back-up",
+          "TV points to all main rooms"
+        ]
+      },
+      {
+        "title": "Internal Finishes",
+        "items": [
+          "Underfloor heating",
+          "Satin nickel door furniture",
+          "All walls and ceilings finished smooth: Dulux matt emulsion",
+          "Karndean flooring",
+          "Carpets to bedrooms"
+        ]
+      },
+      {
+        "title": "External",
+        "items": [
+          "Planting to front and turfing to the rear",
+          "Contemporary light fittings to front and rear",
+          "Resin bonded finish to parking area"
+        ]
+      },
+      {
+        "title": "Environmental Features",
+        "items": [
+          "Energy-efficient boiler",
+          "Energy-efficient appliances (A rated where possible)",
+          "Energy-efficient LED light fittings (selected rooms)",
+          "Solar panels",
+          "All apartment PEA A rated"
+        ]
+      },
+      {
+        "title": "General",
+        "items": [
+          "Communal garden",
+          "Traditional brick and block cavity wall construction",
+          "Elevations are brick and stone",
+          "A bespoke homeowners manual with full details of the property",
+          "Grounds professionally maintained by Management Company"
+        ]
+      }
+    ],
+    "locationInfo": {
+      "description": "Kingston Hill is one of South West London's most sought-after addresses, offering the rare combination of a leafy, village-like setting with fast access to Central London and the Surrey countryside.",
+      "highlights": [
+        {
+          "icon": "\ud83c\udf33",
+          "label": "Richmond Park",
+          "detail": "Walking distance to London's largest Royal Park, with 2,500 acres of open parkland and deer herds"
+        },
+        {
+          "icon": "\ud83d\udecd\ufe0f",
+          "label": "Kingston Town Centre",
+          "detail": "A short drive to Kingston's shops, riverside restaurants, and weekly market"
+        },
+        {
+          "icon": "\ud83d\ude86",
+          "label": "Norbiton Station",
+          "detail": "South Western Railway services to London Waterloo in approximately 30 minutes"
+        },
+        {
+          "icon": "\ud83c\udf93",
+          "label": "Kingston University",
+          "detail": "Kingston Hill campus directly adjacent, with the town centre campus a short distance away"
+        },
+        {
+          "icon": "\ud83c\udfe0",
+          "label": "Excellent Schools",
+          "detail": "Catchment for outstanding state and independent schools including Holy Cross, Marymount, and Rokeby"
+        },
+        {
+          "icon": "\ud83d\udeb6",
+          "label": "River Thames",
+          "detail": "Thames towpath walks and Kingston riverside within easy reach"
+        }
+      ]
+    },
+    "areaGuide": {
+      "intro": "Shalford Lodge is a collection of 13 beautifully appointed two and three bedroom luxury apartments situated on Kingston Hill. This bespoke development enjoys the outstanding backdrop of Richmond Park whilst benefitting from the convenience of excellent road links into London.",
+      "sections": [
+        {
+          "title": "A Beautiful Setting",
+          "content": "Kingston Hill is a prestigious area situated a short distance from the active town centre of Kingston upon Thames, which offers a large selection of shops, eateries and delightful scenic walks along the river Thames."
+        },
+        {
+          "title": "Sought After Location",
+          "content": "Each of these stunning new homes will be finished to the highest standard throughout with a specification others can only envy. All Kidbrook Homes are designed for their unique location and to ensure long term enjoyment for each and every one of our customers."
+        }
+      ],
+      "transport": {
+        "station": "Norbiton",
+        "londonTime": "30 minutes to Waterloo",
+        "distances": [
+          {"label": "Richmond Park", "detail": "Walking distance"},
+          {"label": "Kingston Town Centre", "detail": "Short drive"},
+          {"label": "Central London", "detail": "Via A3"}
+        ]
+      }
+    }
+  },
+  {
+    "name": "Ardmore Place",
+    "slug": "ardmore-place",
+    "location": "Hartfield Road, Wimbledon, London",
+    "status": "Show Homes Open",
+    "total": 8,
+    "types": "Studios, 1 & 2 bedroom apartments",
+    "priceRange": "From £925,000",
+    "sizeRange": "431 - 1,152 sq ft",
+    "description": "Ardmore Place is a new landmark development for central Wimbledon. Set in an established, tree-lined avenue of elegant period, bay-fronted family homes and contemporary high-end apartments. The development's cutting-edge design and high specification creates true exclusivity. Situated within half a mile of Wimbledon Station with its frequent and direct service to Waterloo in under 20 minutes, Ardmore Place is perfectly placed for those wanting the best of both worlds - village living with city connectivity.",
+    "imageDir": "ardmore-place",
+    "heroImage": "/images/ardmore-place/cgi-front.jpg",
+    "sitePlanImage": "/images/ardmore-place/siteplan-aerial-combined.jpg",
+    "isCurrent": true,
+    "floorplanImages": {
+      "1": "/images/ardmore-place/floorplan-apt1.jpg",
+      "2": "/images/ardmore-place/floorplan-apt2.jpg",
+      "3": "/images/ardmore-place/floorplan-apt3.jpg",
+      "4": "/images/ardmore-place/floorplan-apt4.jpg",
+      "5": "/images/ardmore-place/floorplan-apt5.jpg",
+      "6": "/images/ardmore-place/floorplan-apt6.jpg",
+      "7": "/images/ardmore-place/floorplan-apt7.jpg",
+      "8": "/images/ardmore-place/floorplan-apt8.jpg"
+    },
+    "plots": [
+      {
+        "plot": 1, "name": "Apartment 1", "type": "2 bed, 2 bath & study", "size": "1,152 sq ft", "status": "Price on application",
+        "floor": "Lower Ground Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "8168 x 6350", "dimensionsImperial": "26'10\" x 20'10\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4657 x 2956", "dimensionsImperial": "15'3.5\" x 9'8.5\""},
+          {"room": "Study", "dimensionsMetric": "3207 x 1382", "dimensionsImperial": "10'6.5\" x 4'6.5\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "3856 x 3552", "dimensionsImperial": "12'8\" x 11'8\""}
+        ],
+        "features": ["Sun Terrace", "External Kitchen/Dining Area", "Store"]
+      },
+      {
+        "plot": 2, "name": "Apartment 2", "type": "2 bed, 2 bath", "size": "1,098 sq ft", "status": "925,000",
+        "floor": "Lower Ground Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "8168 x 5343", "dimensionsImperial": "26'10\" x 17'6.5\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4392 x 3072", "dimensionsImperial": "14'5\" x 10'1\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "5327 x 3727", "dimensionsImperial": "17'6\" x 12'3\""}
+        ],
+        "features": ["Sun Terrace", "External Kitchen/Dining Area", "Store"]
+      },
+      {
+        "plot": 3, "name": "Apartment 3", "type": "2 bed, 2 bath & study", "size": "969 sq ft", "status": "Sold",
+        "floor": "Ground Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "8143 x 5343", "dimensionsImperial": "26'9\" x 17'6.5\""},
+          {"room": "Study Area", "dimensionsMetric": "1893 x 1525", "dimensionsImperial": "6'2.5\" x 5'0\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5122 x 3020", "dimensionsImperial": "16'10\" x 9'11\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "3849 x 2770", "dimensionsImperial": "12'7.5\" x 9'1\""}
+        ],
+        "features": ["Terrace", "Balcony"]
+      },
+      {
+        "plot": 4, "name": "Apartment 4", "type": "2 bed, 2 bath", "size": "958 sq ft", "status": "Reserved",
+        "floor": "Ground Floor", "bedrooms": 2, "bathrooms": 2,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "8158 x 5343", "dimensionsImperial": "26'9.5\" x 17'6.5\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4357 x 3090", "dimensionsImperial": "14'3.5\" x 10'1.5\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "5252 x 2655", "dimensionsImperial": "17'3\" x 8'8.5\""}
+        ],
+        "features": ["Terrace", "Balcony"]
+      },
+      {
+        "plot": 5, "name": "Apartment 5", "type": "1 bed, 1 bath", "size": "495 sq ft", "status": "Price on application",
+        "floor": "First Floor", "bedrooms": 1, "bathrooms": 1,
+        "rooms": [
+          {"room": "Living", "dimensionsMetric": "4550 x 2755", "dimensionsImperial": "14'11.5\" x 9'0.5\""},
+          {"room": "Kitchen, Dining", "dimensionsMetric": "3787 x 2195", "dimensionsImperial": "12'5\" x 7'2.5\""},
+          {"room": "Bedroom", "dimensionsMetric": "3198 x 3035", "dimensionsImperial": "10'6\" x 9'11.5\""}
+        ],
+        "features": ["Terrace"]
+      },
+      {
+        "plot": 6, "name": "Apartment 6", "type": "Studio", "size": "431 sq ft", "status": "Reserved",
+        "floor": "First Floor", "bedrooms": 1, "bathrooms": 1,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "6643 x 3093", "dimensionsImperial": "21'9.5\" x 10'2\""},
+          {"room": "Bedroom", "dimensionsMetric": "3317 x 3223", "dimensionsImperial": "10'10.5\" x 10'7\""}
+        ],
+        "features": []
+      },
+      {
+        "plot": 7, "name": "Apartment 7", "type": "1 bed, 1 bath", "size": "484 sq ft", "status": "Sold",
+        "floor": "First Floor", "bedrooms": 1, "bathrooms": 1,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "5845 x 4006", "dimensionsImperial": "19'2.5\" x 13'2\""},
+          {"room": "Bedroom", "dimensionsMetric": "4250 x 2630", "dimensionsImperial": "13'11.5\" x 8'7.5\""}
+        ],
+        "features": ["Terrace"]
+      },
+      {
+        "plot": 8, "name": "Apartment 8", "type": "Penthouse", "size": "1,073 sq ft", "status": "Price on application",
+        "floor": "Second Floor", "bedrooms": 1, "bathrooms": 1,
+        "rooms": [
+          {"room": "Kitchen, Dining, Living", "dimensionsMetric": "7357 x 5415", "dimensionsImperial": "24'2\" x 17'9.5\""},
+          {"room": "Bedroom", "dimensionsMetric": "5370 x 3103", "dimensionsImperial": "17'7.5\" x 10'2.5\""},
+          {"room": "Study", "dimensionsMetric": "3634 x 3342", "dimensionsImperial": "11'11\" x 10'11.5\""}
+        ],
+        "features": ["Terrace", "Green Roof Views"]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where is Ardmore Place, Wimbledon?",
+        "answer": "Ardmore Place is located on Hartfield Road in Wimbledon, South West London. It's within walking distance of Wimbledon Village, Wimbledon Common, and Wimbledon station, which offers District line, Thameslink, and South Western Railway services into Central London."
+      },
+      {
+        "question": "How many apartments are at Ardmore Place?",
+        "answer": "Ardmore Place is a boutique development of just 8 apartments, including studios, 1-bedroom, 2-bedroom apartments, and a penthouse. Sizes range from 431 to 1,152 square feet."
+      },
+      {
+        "question": "What are the prices at Ardmore Place, Wimbledon?",
+        "answer": "Prices at Ardmore Place start from £925,000 for a 2-bedroom apartment. A number of plots have already been sold or reserved -- contact us for current availability."
+      },
+      {
+        "question": "Are show homes open at Ardmore Place?",
+        "answer": "Yes, show homes at Ardmore Place are now open for viewing. Contact us on 01483 923693 or register your interest online to arrange a visit."
+      }
+    ],
+    "specification": [
+      {
+        "title": "Kitchen",
+        "items": [
+          "Exceptional Wooden Heart of Weybridge units (with choice of doors subject to stage of construction)",
+          "Quartz worktop and up stands",
+          "Siemens integrated oven and microwave",
+          "Siemens stainless steel gas hob",
+          "Fully integrated dishwasher",
+          "Fully integrated fridge freezer",
+          "Fully fitted extractor canopy",
+          "Fully integrated washing machine/tumble dryer",
+          "Chrome mixer tap",
+          "Composite Engineered Flooring"
+        ]
+      },
+      {
+        "title": "Bathrooms & En Suites",
+        "items": [
+          "Designer white sanitary ware by Roca",
+          "Exceptional chrome fittings from Hansgrohe",
+          "Designer floor and wall tiling by Porcelanosa",
+          "Contemporary chrome towel radiators",
+          "Full height tiling around shower enclosure",
+          "Mirror fully fitted",
+          "Chrome LED recessed down lighters",
+          "Shaver point/toothbrush charger fully fitted",
+          "Thermostatically controlled Hansgrohe shower",
+          "Glass shower screen"
+        ]
+      },
+      {
+        "title": "Internal Finishes",
+        "items": [
+          "Underfloor heating",
+          "Satin nickel door furniture",
+          "All walls and ceilings finished smooth: Dulux matt emulsion",
+          "Karndean flooring",
+          "Carpets to bedrooms"
+        ]
+      },
+      {
+        "title": "External",
+        "items": [
+          "Planting to front and turfing to the rear",
+          "Contemporary light fittings to front and rear",
+          "Resin bonded finish to parking area"
+        ]
+      },
+      {
+        "title": "Electrical, Media & Connectivity",
+        "items": [
+          "TV points to all main rooms",
+          "BT points to access position",
+          "Pre-wired for wireless security alarm",
+          "USB points in kitchen and all bedrooms",
+          "Energy saving LED recessed downlights to kitchens and bathrooms",
+          "Energy efficient pendants to remaining rooms",
+          "Mains smoke alarm with battery backup",
+          "Colour video entry system"
+        ]
+      },
+      {
+        "title": "Environmental Features",
+        "items": [
+          "Energy-efficient boiler",
+          "Energy-efficient appliances (A rated where possible)",
+          "Energy-efficient LED light fittings",
+          "Photo Voltaic solar panels",
+          "All apartments PEA A rated"
+        ]
+      },
+      {
+        "title": "General",
+        "items": [
+          "Communal garden",
+          "Traditional brick and block cavity wall construction",
+          "Elevations are brick and stone",
+          "A bespoke homeowners manual with full details of the property",
+          "Grounds professionally maintained by Management Company"
+        ]
+      }
+    ],
+    "locationInfo": {
+      "description": "Hartfield Road places you moments from Wimbledon Village and the open green spaces of Wimbledon Common, with fast rail connections into Central London and the charm of SW19 on your doorstep.",
+      "highlights": [
+        {
+          "icon": "\u2615",
+          "label": "Wimbledon Village",
+          "detail": "Independent cafes, boutiques, and restaurants on the High Street, a short walk away"
+        },
+        {
+          "icon": "\ud83c\udf33",
+          "label": "Wimbledon Common",
+          "detail": "Over 1,100 acres of open heathland, woodland walks, and horse riding"
+        },
+        {
+          "icon": "\ud83d\ude86",
+          "label": "Wimbledon Station",
+          "detail": "District line, Thameslink, and South Western Railway services - Waterloo in 17 minutes"
+        },
+        {
+          "icon": "\ud83c\udfbe",
+          "label": "All England Club",
+          "detail": "Home of The Championships, Wimbledon - one of SW19's most iconic landmarks"
+        },
+        {
+          "icon": "\ud83c\udfe0",
+          "label": "Excellent Schools",
+          "detail": "Outstanding state and independent schools including King's College School, Wimbledon High, and Ursuline"
+        },
+        {
+          "icon": "\ud83d\udecd\ufe0f",
+          "label": "Wimbledon Town Centre",
+          "detail": "Centre Court Shopping Centre, Polka Theatre, and New Wimbledon Theatre nearby"
+        }
+      ]
+    },
+    "areaGuide": {
+      "intro": "Ardmore Place is a new landmark development for central Wimbledon. Set in an established, tree-lined avenue of elegant period, bay-fronted family homes and contemporary high-end apartments.",
+      "sections": [
+        {
+          "title": "Location",
+          "content": "Wimbledon is a location where life balance is part of the fabric - a bustling town centre, a stylish village, a beautiful common, a generous park with its very own lake and exceptional interconnections. Famous as the home of the annual Wimbledon Championships, the oldest and most prestigious tennis tournament in the world, Wimbledon also offers a European style cafe society, trendy independent boutiques, lively pubs, relaxing bars and many exhilarating places to eat."
+        },
+        {
+          "title": "Out and About",
+          "content": "Wimbledon Village combines old school charm with modern day elegance - an ideal place for catching up with friends and enjoying a relaxed meal. Many of the village's eateries have pavement-side dining - the perfect spot to watch the world go by. If you're looking for a bit of rest and relaxation or a spot of retail therapy, few towns can rival Wimbledon."
+        },
+        {
+          "title": "Exceptional Connectivity",
+          "content": "Ardmore Place occupies an enviable position for numerous reasons. Not only is the development in a delightful, tree-lined avenue just moments from the town centre by foot, but Wimbledon station also offers an exceptional, direct service to Clapham Junction in just 7 minutes and London Waterloo in 19 minutes."
+        }
+      ],
+      "transport": {
+        "station": "Wimbledon",
+        "londonTime": "19 minutes to Waterloo",
+        "distances": [
+          {"label": "Earlsfield", "detail": "3 minutes by rail"},
+          {"label": "Clapham Junction", "detail": "7 minutes by rail"},
+          {"label": "Vauxhall", "detail": "12 minutes by rail"},
+          {"label": "London Waterloo", "detail": "19 minutes by rail"},
+          {"label": "London City Airport", "detail": "17.9 miles (1 hr 11 mins)"},
+          {"label": "London Heathrow", "detail": "26.7 miles (32 mins)"},
+          {"label": "London Gatwick", "detail": "28.9 miles (42 mins)"},
+          {"label": "London Luton", "detail": "59.5 miles (1 hr 7 mins)"},
+          {"label": "London Stansted", "detail": "88.4 miles (1 hr 33 mins)"}
+        ]
+      },
+      "schools": "King's College School, Wimbledon College, Ursuline High School, Wimbledon School of English, Wimbledon College of Arts"
+    }
+  },
+  {
+    "name": "Ockford Road",
+    "slug": "ockford-road",
+    "location": "Ockford Road, Godalming, Surrey",
+    "status": "Selling Now",
+    "total": 3,
+    "types": "4 bedroom detached houses",
+    "priceRange": "From £1,250,000",
+    "sizeRange": "1,919 sq ft",
+    "description": "Three beautifully crafted detached family homes in the desirable Surrey town of Godalming. Each home offers generous living space with four bedrooms, four bathrooms, and premium specifications throughout.",
+    "imageDir": null,
+    "heroImage": "/images/school-lane-puttenham/photo-5.jpg",
+    "isCurrent": true,
+    "plots": [
+      {
+        "plot": 1, "name": "Plot 1", "type": "4 bed, 4 bath detached", "size": "1,919 sq ft", "status": "Reserved",
+        "floor": "Ground & First Floor", "bedrooms": 4, "bathrooms": 4,
+        "rooms": [
+          {"room": "Kitchen", "dimensionsMetric": "3500 x 2925", "dimensionsImperial": "11'5\" x 9'6\""},
+          {"room": "Dining", "dimensionsMetric": "4950 x 3925", "dimensionsImperial": "16'2\" x 12'10\""},
+          {"room": "Family", "dimensionsMetric": "3500 x 2925", "dimensionsImperial": "11'5\" x 9'6\""},
+          {"room": "Lounge", "dimensionsMetric": "4275 x 3900", "dimensionsImperial": "14'0\" x 12'9\""},
+          {"room": "Study", "dimensionsMetric": "4275 x 2200", "dimensionsImperial": "14'0\" x 7'2\""},
+          {"room": "Utility", "dimensionsMetric": "2250 x 1600", "dimensionsImperial": "7'4\" x 5'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5000 x 3925", "dimensionsImperial": "16'4\" x 12'10\""},
+          {"room": "Dressing", "dimensionsMetric": "2300 x 2225", "dimensionsImperial": "7'6\" x 7'4\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "2850 x 2550", "dimensionsImperial": "9'4\" x 8'4\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4000 x 2475", "dimensionsImperial": "13'1\" x 8'1\""},
+          {"room": "Bedroom 4", "dimensionsMetric": "2575 x 2300", "dimensionsImperial": "8'5\" x 7'6\""},
+          {"room": "Study/Snug", "dimensionsMetric": "3925 x 1925", "dimensionsImperial": "12'10\" x 6'4\""}
+        ],
+        "features": ["Double Garage", "Landscaped Gardens"]
+      },
+      {
+        "plot": 2, "name": "Plot 2", "type": "4 bed, 4 bath detached", "size": "1,919 sq ft", "status": "1,250,000",
+        "floor": "Ground & First Floor", "bedrooms": 4, "bathrooms": 4,
+        "rooms": [
+          {"room": "Kitchen", "dimensionsMetric": "3500 x 2925", "dimensionsImperial": "11'5\" x 9'6\""},
+          {"room": "Dining", "dimensionsMetric": "4950 x 3925", "dimensionsImperial": "16'2\" x 12'10\""},
+          {"room": "Family", "dimensionsMetric": "3500 x 2925", "dimensionsImperial": "11'5\" x 9'6\""},
+          {"room": "Lounge", "dimensionsMetric": "4275 x 3900", "dimensionsImperial": "14'0\" x 12'9\""},
+          {"room": "Study", "dimensionsMetric": "4275 x 2200", "dimensionsImperial": "14'0\" x 7'2\""},
+          {"room": "Utility", "dimensionsMetric": "2250 x 1600", "dimensionsImperial": "7'4\" x 5'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5000 x 3925", "dimensionsImperial": "16'4\" x 12'10\""},
+          {"room": "Dressing", "dimensionsMetric": "2300 x 2225", "dimensionsImperial": "7'6\" x 7'4\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "2850 x 2550", "dimensionsImperial": "9'4\" x 8'4\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4000 x 2475", "dimensionsImperial": "13'1\" x 8'1\""},
+          {"room": "Bedroom 4", "dimensionsMetric": "2575 x 2300", "dimensionsImperial": "8'5\" x 7'6\""},
+          {"room": "Study/Snug", "dimensionsMetric": "3925 x 1925", "dimensionsImperial": "12'10\" x 6'4\""}
+        ],
+        "features": ["Double Garage", "Landscaped Gardens"]
+      },
+      {
+        "plot": 3, "name": "Plot 3", "type": "4 bed, 4 bath detached", "size": "1,919 sq ft", "status": "Reserved",
+        "floor": "Ground & First Floor", "bedrooms": 4, "bathrooms": 4,
+        "rooms": [
+          {"room": "Kitchen", "dimensionsMetric": "3500 x 2925", "dimensionsImperial": "11'5\" x 9'6\""},
+          {"room": "Dining", "dimensionsMetric": "4950 x 3925", "dimensionsImperial": "16'2\" x 12'10\""},
+          {"room": "Family", "dimensionsMetric": "3500 x 2925", "dimensionsImperial": "11'5\" x 9'6\""},
+          {"room": "Lounge", "dimensionsMetric": "4275 x 3900", "dimensionsImperial": "14'0\" x 12'9\""},
+          {"room": "Study", "dimensionsMetric": "4275 x 2200", "dimensionsImperial": "14'0\" x 7'2\""},
+          {"room": "Utility", "dimensionsMetric": "2250 x 1600", "dimensionsImperial": "7'4\" x 5'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5000 x 3925", "dimensionsImperial": "16'4\" x 12'10\""},
+          {"room": "Dressing", "dimensionsMetric": "2300 x 2225", "dimensionsImperial": "7'6\" x 7'4\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "2850 x 2550", "dimensionsImperial": "9'4\" x 8'4\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "4000 x 2475", "dimensionsImperial": "13'1\" x 8'1\""},
+          {"room": "Bedroom 4", "dimensionsMetric": "2575 x 2300", "dimensionsImperial": "8'5\" x 7'6\""},
+          {"room": "Study/Snug", "dimensionsMetric": "3925 x 1925", "dimensionsImperial": "12'10\" x 6'4\""}
+        ],
+        "features": ["Double Garage", "Landscaped Gardens"]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where is the Ockford Road development?",
+        "answer": "Ockford Road is in Godalming, a charming historic town in Surrey. Godalming offers independent shops, restaurants, and excellent schools, with Godalming station providing fast rail connections to London Waterloo in approximately 45 minutes."
+      },
+      {
+        "question": "How many homes are at Ockford Road, Godalming?",
+        "answer": "Ockford Road comprises just 3 individually designed detached family homes, each offering 4 bedrooms, 4 bathrooms, and 1,919 square feet of living space."
+      },
+      {
+        "question": "What are the prices at Ockford Road, Godalming?",
+        "answer": "Homes at Ockford Road are priced from £1,250,000. With only 3 homes available, this is an exclusive opportunity. Contact us for the latest availability."
+      }
+    ],
+    "specification": [
+      {
+        "title": "Kitchen",
+        "items": [
+          "Exceptional 'Wooden Heart' of Weybridge units",
+          "Silestone worktop and upstands",
+          "Siemens integrated oven and microwave",
+          "Siemens induction vented hob",
+          "Siemens fully integrated dishwasher",
+          "Siemens integrated fridge-freezer",
+          "Bosch washing machine to Utility",
+          "Bosch tumble dryer to Utility",
+          "Silestone worktop to Utility",
+          "4-in-1 hot tap",
+          "Wine cooler and wine chiller"
+        ]
+      },
+      {
+        "title": "Bathrooms & En Suites",
+        "items": [
+          "Freestanding bath to family bathroom",
+          "Walk-in rainfall shower to principal en suite",
+          "Designer Roca sanitaryware throughout",
+          "Hansgrohe chrome thermostatic fittings",
+          "Porcelanosa floor and wall tiling to wet areas",
+          "Heated chrome towel rails"
+        ]
+      },
+      {
+        "title": "Internal Finishes",
+        "items": [
+          "Engineered oak flooring to ground floor living areas and hallway",
+          "Underfloor heating to ground floor",
+          "Carpeted first floor with premium wool-blend carpet",
+          "Designer lighting scheme throughout",
+          "Flush oak veneer internal doors with brushed chrome ironmongery",
+          "Fitted wardrobes to principal bedroom"
+        ]
+      },
+      {
+        "title": "Heating & Energy",
+        "items": [
+          "Gas central heating with zoned control",
+          "Underfloor heating to ground floor",
+          "High-performance double-glazed windows",
+          "Excellent EPC rating",
+          "Smart thermostat pre-installed"
+        ]
+      },
+      {
+        "title": "Exterior & Landscaping",
+        "items": [
+          "Landscaped front and rear gardens with turf and planting",
+          "Block-paved driveway for multiple vehicles",
+          "Double garage with power and lighting",
+          "EV charging point",
+          "External lighting to front and rear",
+          "Gated side access to rear garden"
+        ]
+      }
+    ],
+    "locationInfo": {
+      "description": "Godalming is one of Surrey's most desirable market towns, with a picturesque High Street, strong schools, and the Surrey Hills countryside on your doorstep. Ockford Road is a well-regarded residential road south of the town centre.",
+      "highlights": [
+        {
+          "icon": "\ud83d\udecd\ufe0f",
+          "label": "Godalming High Street",
+          "detail": "Independent shops, cafes, and restaurants in a characterful historic setting"
+        },
+        {
+          "icon": "\u26f0\ufe0f",
+          "label": "Surrey Hills AONB",
+          "detail": "Immediate access to walks, cycling, and riding in an Area of Outstanding Natural Beauty"
+        },
+        {
+          "icon": "\ud83d\ude86",
+          "label": "Godalming Station",
+          "detail": "South Western Railway direct to London Waterloo in approximately 45 minutes"
+        },
+        {
+          "icon": "\ud83c\udf93",
+          "label": "Charterhouse School",
+          "detail": "One of the UK's leading independent schools, located on the edge of town"
+        },
+        {
+          "icon": "\ud83c\udfe0",
+          "label": "Outstanding Schools",
+          "detail": "Strong state schools including Godalming College, Broadwater School, and local primaries"
+        },
+        {
+          "icon": "\ud83d\udeb6",
+          "label": "River Wey",
+          "detail": "Riverside walks along the Wey Navigation towpath from Godalming to Guildford"
+        }
+      ]
+    },
+    "areaGuide": {
+      "intro": "An exclusive development of three four-bedroom luxury homes in a highly desirable location in the sought after town of Godalming.",
+      "sections": [
+        {
+          "title": "Situation",
+          "content": "A collection of three beautifully appointed four-bedroom luxury family homes situated in Godalming. This bespoke development enjoys privacy and seclusion whilst benefitting from the convenience of being close to the Town Centre and excellent road and rail links."
+        },
+        {
+          "title": "Town & Surroundings",
+          "content": "There is a superb choice of boutiques, shops, and services in Godalming. For a more extensive range of shopping, sporting and leisure facilities, the Cathedral town of Guildford lies only a few miles away offering a comprehensive range of high street shopping, leisure, and cultural amenities. These include a variety of restaurants, two theatres, multiplex cinema, clubs and bars, the G-Live event venue, and the Spectrum Sports Centre."
+        }
+      ],
+      "transport": {
+        "station": "Godalming",
+        "londonTime": "42 minutes to Waterloo",
+        "distances": [
+          {"label": "Godalming Station", "detail": "0.1 miles"},
+          {"label": "A3", "detail": "2.28 miles"},
+          {"label": "Guildford", "detail": "4.5 miles"}
+        ]
+      },
+      "schools": "Charterhouse, St Catherine's, Royal Grammar School, Guildford High School, Prior's Field, St Hilary's, Godalming Sixth Form College"
+    }
+  },
+  {
+    "name": "Whitestone Woods",
+    "slug": "whitestone-woods",
+    "location": "Mayford, Woking, Surrey",
+    "status": "Sold Out",
+    "total": 8,
+    "types": "2 & 3 bedroom semi-detached houses",
+    "description": "A charming development of two and three bedroom family homes nestled in a semi-rural location, just to the north of the popular and sought-after village of Mayford and its Nature Reserve. This bespoke development enjoys the tranquil backdrop of the Mayford Meadows Nature Reserve whilst benefitting from the convenience of excellent road links to both Guildford and Woking.",
+    "imageDir": null,
+    "heroImage": "/images/broadoak-park/photo-1.jpg",
+    "isCurrent": true,
+    "plots": [
+      {
+        "plot": 1, "name": "The Gatton", "type": "2 bed semi-detached", "size": "820 sq ft", "status": "Sold",
+        "floor": "Ground & First Floor", "bedrooms": 2, "bathrooms": 1,
+        "rooms": [
+          {"room": "Living Room", "dimensionsMetric": "4250 x 4025", "dimensionsImperial": "13'10\" x 13'2\""},
+          {"room": "Kitchen/Dining", "dimensionsMetric": "5450 x 3125", "dimensionsImperial": "17'10\" x 10'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4250 x 4100", "dimensionsImperial": "13'11\" x 11'1\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4025 x 3275", "dimensionsImperial": "13'2\" x 10'9\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking"]
+      },
+      {
+        "plot": 2, "name": "The Gatton", "type": "2 bed semi-detached", "size": "820 sq ft", "status": "Sold",
+        "floor": "Ground & First Floor", "bedrooms": 2, "bathrooms": 1,
+        "rooms": [
+          {"room": "Living Room", "dimensionsMetric": "4250 x 4025", "dimensionsImperial": "13'10\" x 13'2\""},
+          {"room": "Kitchen/Dining", "dimensionsMetric": "5450 x 3125", "dimensionsImperial": "17'10\" x 10'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4250 x 4100", "dimensionsImperial": "13'11\" x 11'1\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4025 x 3275", "dimensionsImperial": "13'2\" x 10'9\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking"]
+      },
+      {
+        "plot": 3, "name": "The Wisley", "type": "3 bed semi-detached", "size": "1,200 sq ft", "status": "Sold",
+        "floor": "Ground, First & Second Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Living/Dining/Kitchen", "dimensionsMetric": "8025 x 4725", "dimensionsImperial": "26'3\" x 15'6\""},
+          {"room": "Study", "dimensionsMetric": "2425 x 1775", "dimensionsImperial": "7'11\" x 5'10\""},
+          {"room": "Utility", "dimensionsMetric": "2425 x 1600", "dimensionsImperial": "7'11\" x 5'3\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4725 x 2450", "dimensionsImperial": "15'6\" x 8'0\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "3750 x 2525", "dimensionsImperial": "12'3\" x 8'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5050 x 4725", "dimensionsImperial": "16'6\" x 15'6\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking", "Study"]
+      },
+      {
+        "plot": 4, "name": "The Claremont", "type": "3 bed semi-detached", "size": "1,200 sq ft", "status": "Sold",
+        "floor": "Ground, First & Second Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Living/Dining/Kitchen", "dimensionsMetric": "8025 x 4725", "dimensionsImperial": "26'3\" x 15'6\""},
+          {"room": "Study with Bay", "dimensionsMetric": "2425 x 2600", "dimensionsImperial": "7'11\" x 8'6\""},
+          {"room": "Utility", "dimensionsMetric": "2425 x 1600", "dimensionsImperial": "7'11\" x 5'3\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4725 x 2450", "dimensionsImperial": "15'6\" x 8'0\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "3750 x 2525", "dimensionsImperial": "12'3\" x 8'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5050 x 4725", "dimensionsImperial": "16'6\" x 15'6\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking", "Study with Bay Window"]
+      },
+      {
+        "plot": 5, "name": "The Claremont", "type": "3 bed semi-detached", "size": "1,200 sq ft", "status": "Sold",
+        "floor": "Ground, First & Second Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Living/Dining/Kitchen", "dimensionsMetric": "8025 x 4725", "dimensionsImperial": "26'3\" x 15'6\""},
+          {"room": "Study with Bay", "dimensionsMetric": "2425 x 2600", "dimensionsImperial": "7'11\" x 8'6\""},
+          {"room": "Utility", "dimensionsMetric": "2425 x 1600", "dimensionsImperial": "7'11\" x 5'3\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4725 x 2450", "dimensionsImperial": "15'6\" x 8'0\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "3750 x 2525", "dimensionsImperial": "12'3\" x 8'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5050 x 4725", "dimensionsImperial": "16'6\" x 15'6\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking", "Study with Bay Window"]
+      },
+      {
+        "plot": 6, "name": "The Wisley", "type": "3 bed semi-detached", "size": "1,200 sq ft", "status": "Sold",
+        "floor": "Ground, First & Second Floor", "bedrooms": 3, "bathrooms": 2,
+        "rooms": [
+          {"room": "Living/Dining/Kitchen", "dimensionsMetric": "8025 x 4725", "dimensionsImperial": "26'3\" x 15'6\""},
+          {"room": "Study", "dimensionsMetric": "2425 x 1775", "dimensionsImperial": "7'11\" x 5'10\""},
+          {"room": "Utility", "dimensionsMetric": "2425 x 1600", "dimensionsImperial": "7'11\" x 5'3\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4725 x 2450", "dimensionsImperial": "15'6\" x 8'0\""},
+          {"room": "Bedroom 3", "dimensionsMetric": "3750 x 2525", "dimensionsImperial": "12'3\" x 8'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "5050 x 4725", "dimensionsImperial": "16'6\" x 15'6\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking", "Study"]
+      },
+      {
+        "plot": 7, "name": "The Gatton", "type": "2 bed semi-detached", "size": "820 sq ft", "status": "Sold",
+        "floor": "Ground & First Floor", "bedrooms": 2, "bathrooms": 1,
+        "rooms": [
+          {"room": "Living Room", "dimensionsMetric": "4250 x 4025", "dimensionsImperial": "13'10\" x 13'2\""},
+          {"room": "Kitchen/Dining", "dimensionsMetric": "5450 x 3125", "dimensionsImperial": "17'10\" x 10'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4250 x 4100", "dimensionsImperial": "13'11\" x 11'1\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4025 x 3275", "dimensionsImperial": "13'2\" x 10'9\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking"]
+      },
+      {
+        "plot": 8, "name": "The Gatton", "type": "2 bed semi-detached", "size": "820 sq ft", "status": "Sold",
+        "floor": "Ground & First Floor", "bedrooms": 2, "bathrooms": 1,
+        "rooms": [
+          {"room": "Living Room", "dimensionsMetric": "4250 x 4025", "dimensionsImperial": "13'10\" x 13'2\""},
+          {"room": "Kitchen/Dining", "dimensionsMetric": "5450 x 3125", "dimensionsImperial": "17'10\" x 10'3\""},
+          {"room": "Bedroom 1", "dimensionsMetric": "4250 x 4100", "dimensionsImperial": "13'11\" x 11'1\""},
+          {"room": "Bedroom 2", "dimensionsMetric": "4025 x 3275", "dimensionsImperial": "13'2\" x 10'9\""}
+        ],
+        "features": ["Rear Garden", "Allocated Parking"]
+      }
+    ],
+    "specification": [
+      {
+        "title": "Kitchen",
+        "items": [
+          "Exceptional Wooden Heart of Weybridge units (with choice of doors subject to stage of construction)",
+          "Quartz worktop and up stands",
+          "Integrated oven and microwave",
+          "Stainless steel gas hob",
+          "Fully integrated dishwasher",
+          "Fully integrated fridge freezer",
+          "Zanussi free standing washing machine (selected plots)",
+          "Zanussi free standing condenser dryer (selected plots)",
+          "Extractor canopy",
+          "Chrome mixer tap",
+          "Composite Engineered Flooring",
+          "Chrome sockets"
+        ]
+      },
+      {
+        "title": "Bathrooms & En Suites",
+        "items": [
+          "Designer white sanitaryware by Roca",
+          "Exceptional chrome fittings from Hansgrohe",
+          "Designer floor and wall tiling by Porcelanosa",
+          "Contemporary chrome towel radiators",
+          "Full height tiling around shower enclosure",
+          "Mirror fully fitted",
+          "LED energy saving recessed downlighters",
+          "Shaver point/toothbrush charger fully fitted",
+          "Thermostatically controlled Hansgrohe shower",
+          "Glass shower door"
+        ]
+      },
+      {
+        "title": "Internal Finishes",
+        "items": [
+          "Radiators to all floors",
+          "Contemporary panelled doors",
+          "Chrome door furniture",
+          "Gas fired central heating",
+          "All walls and ceilings finished smooth: High quality Dulux Almond White painted walls (choice of colour subject to construction stage)",
+          "Ceilings high quality Dulux Brilliant White",
+          "Hand painted staircase Dulux Satin Brilliant White",
+          "Composite Engineered flooring to ground floor",
+          "Luxurious carpet to all other rooms, except wet rooms which are tiled"
+        ]
+      },
+      {
+        "title": "External",
+        "items": [
+          "Turf to rear gardens",
+          "Outside tap",
+          "Contemporary light fitting to front",
+          "Paving to parking area",
+          "High quality Indian Sandstone paving to patios and footpaths",
+          "Close board fencing"
+        ]
+      },
+      {
+        "title": "Electrical, Media & Connectivity",
+        "items": [
+          "TV points to all main rooms",
+          "BT point to access position",
+          "Pre-wired for CAT 6 access point in loft",
+          "Pre-wired for wireless security alarm",
+          "USB point in kitchen",
+          "Energy saving LED recessed downlights to kitchen",
+          "Energy saving pendants to remaining rooms",
+          "Mains smoke alarm with battery backup",
+          "Chrome doorbell to front door"
+        ]
+      },
+      {
+        "title": "Environmental Features",
+        "items": [
+          "Energy efficient boiler",
+          "Energy efficient appliances (A rated where possible)",
+          "Energy efficient LED light fittings",
+          "Individual car chargers"
+        ]
+      },
+      {
+        "title": "General",
+        "items": [
+          "10-year NHBC Guarantee",
+          "Traditional brick and block cavity wall construction",
+          "Elevations are brick, feature brick and vertical hanging tiles (plots differ)",
+          "Clay tiles to the roof",
+          "A bespoke homeowners manual with full details of the property",
+          "Grounds professionally maintained by Management Company"
+        ]
+      }
+    ],
+    "locationInfo": {
+      "description": "Mayford is a charming village on the outskirts of Woking, offering the best of both worlds - rural tranquility with excellent urban connectivity. The Mayford Meadows Nature Reserve provides a beautiful natural backdrop.",
+      "highlights": [
+        {
+          "icon": "\ud83c\udf3f",
+          "label": "Nature Reserve",
+          "detail": "Adjacent to Mayford Meadows Nature Reserve with walking trails and wildlife"
+        },
+        {
+          "icon": "\ud83d\udecd\ufe0f",
+          "label": "Woking Town Centre",
+          "detail": "Regenerated town centre with extensive shopping, dining and leisure facilities"
+        },
+        {
+          "icon": "\ud83d\ude86",
+          "label": "Woking Station",
+          "detail": "Up to 15 trains per hour, fastest service 24 minutes to London Waterloo"
+        },
+        {
+          "icon": "\u26f3",
+          "label": "Golf",
+          "detail": "Choice of clubs including historic Woking Golf Club (1893), Foxhills, Hoebridge"
+        },
+        {
+          "icon": "\ud83c\udfeb",
+          "label": "Good Schools",
+          "detail": "Well served by state and private schools in the Woking area"
+        },
+        {
+          "icon": "\ud83c\udf33",
+          "label": "Chobham Common",
+          "detail": "National Nature Reserve nearby for walking, cycling and riding"
+        }
+      ]
+    },
+    "areaGuide": {
+      "intro": "A charming development of two and three bedroom family homes nestled in a semi-rural location, just to the north of this popular and sought after village and Nature Reserve.",
+      "sections": [
+        {
+          "title": "A Beautiful Setting",
+          "content": "Whitestone Woods is a collection of just eight beautifully appointed two and three bedroom homes situated in the village of Mayford. This bespoke development enjoys the tranquil backdrop of the Mayford Meadows Nature Reserve whilst benefitting from the convenience of excellent road links to both Guildford and Woking."
+        },
+        {
+          "title": "Town and Country Living",
+          "content": "Woking has 8th Century origins but really developed with the arrival of the Basingstoke Canal in the 18th Century and the railway in the early 19th Century. Both continue to benefit the town. The canal and the River Wey boast scenic stretches of cycle and walking paths along with boating and fishing spots whilst nearby Chobham Common is a National Nature Reserve."
+        },
+        {
+          "title": "The Best of Both Worlds",
+          "content": "Mayford is a village which retains country charm whilst being within easy access of Woking Town centre. Woking has a regenerated, thriving town centre offering extensive shopping, dining and leisure facilities including The New Victoria Theatre and Cinema, and the Lightbox Gallery. For golfers there is a choice of clubs including Woking Golf Club (one of the oldest in the U.K. founded in 1893), Westhill, Hoebridge, Worplesdon, Chobham and Foxhills."
+        }
+      ],
+      "transport": {
+        "station": "Woking",
+        "londonTime": "24 minutes to Waterloo",
+        "distances": [
+          {"label": "Woking Station", "detail": "24 mins to Waterloo (up to 15 trains/hour)"},
+          {"label": "Mayford Village", "detail": "Adjacent"},
+          {"label": "Woking Town Centre", "detail": "Short drive"}
+        ]
+      },
+      "schools": "A good selection of both state and private schools serve the area"
+    }
+  },
+  {
+    "name": "Trinity Place",
+    "slug": "trinity-place",
+    "location": "Basingstoke, Hampshire",
+    "status": "Coming Soon",
+    "total": 10,
+    "types": "6 apartments & 4 houses",
+    "description": "A collection of 10 new homes in Basingstoke, Hampshire, comprising 6 apartments and 4 houses. Further details coming soon.",
+    "imageDir": null,
+    "heroImage": "/images/broadoak-park/photo-3.jpg",
+    "isCurrent": true
+  },
+  {
+    "name": "Broadoak Park",
+    "slug": "broadoak-park",
+    "location": "Tongham, Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A collection of quality homes in the village of Tongham, Surrey. Each home was designed to blend seamlessly with its surroundings, combining modern living with traditional character.",
+    "imageDir": "broadoak-park",
+    "isCurrent": false
+  },
+  {
+    "name": "Tamara",
+    "slug": "tamara",
+    "location": "Weybridge, Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A prestigious development in the sought-after town of Weybridge. These homes offered premium specifications and elegant design in one of Surrey's most desirable locations.",
+    "imageDir": "tamara",
+    "isCurrent": false
+  },
+  {
+    "name": "School Lane",
+    "slug": "school-lane-puttenham",
+    "location": "Puttenham, Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A carefully considered development in the picturesque village of Puttenham. Each home was individually designed to complement the character of this beautiful rural setting.",
+    "imageDir": "school-lane-puttenham",
+    "heroImage": "/images/school-lane-puttenham/photo-5.jpg",
+    "isCurrent": false
+  },
+  {
+    "name": "Highridge",
+    "slug": "highridge",
+    "location": "Reigate, Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A collection of quality homes in the desirable Surrey town of Reigate, offering premium finishes and thoughtful design.",
+    "imageDir": null,
+    "heroImage": "/images/tamara/photo-5.jpg",
+    "isCurrent": false
+  },
+  {
+    "name": "Brooklands Lodge",
+    "slug": "brooklands-lodge",
+    "location": "New Malden, London",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A boutique development in New Malden, combining contemporary design with excellent transport links into Central London.",
+    "imageDir": null,
+    "heroImage": "/images/tamara/photo-3.jpg",
+    "isCurrent": false
+  },
+  {
+    "name": "Milbank",
+    "slug": "milbank",
+    "location": "Farnham, Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A distinguished collection of homes in the historic market town of Farnham, designed to complement the town's Georgian architecture.",
+    "imageDir": null,
+    "heroImage": "/images/shalford-lodge/photo-3.jpg",
+    "isCurrent": false
+  },
+  {
+    "name": "Langtree Place",
+    "slug": "langtree-place",
+    "location": "Woking, Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A collection of homes in Woking, offering quality living with excellent access to the town centre and mainline rail connections to London.",
+    "imageDir": null,
+    "heroImage": "/images/broadoak-park/photo-2.jpg",
+    "isCurrent": false
+  },
+  {
+    "name": "Richmond House",
+    "slug": "richmond-house",
+    "location": "Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A premium residential development showcasing Kidbrook's commitment to quality craftsmanship and attention to detail.",
+    "imageDir": null,
+    "heroImage": "/images/broadoak-park/photo-4.jpg",
+    "isCurrent": false
+  },
+  {
+    "name": "Silverlands",
+    "slug": "silverlands",
+    "location": "Surrey",
+    "status": "Completed",
+    "total": 0,
+    "types": "",
+    "description": "A thoughtfully designed development offering superior homes that blend effortlessly with their surroundings.",
+    "imageDir": null,
+    "heroImage": "/images/broadoak-park/photo-6.jpg",
+    "isCurrent": false
+  }
+]
