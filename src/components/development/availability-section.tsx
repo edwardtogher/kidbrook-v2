@@ -2,14 +2,17 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MotionWrapper } from "@/components/motion-wrapper";
+import { PlotDetailDialog } from "@/components/development/plot-detail-dialog";
 import type { Plot } from "@/data/developments";
 
 interface AvailabilitySectionProps {
   plots: Plot[];
   floorplanImages?: Record<string, string>;
+  developmentName: string;
 }
 
 function formatPrice(status: string): string {
@@ -50,87 +53,137 @@ function getStatusBadge(status: string) {
   );
 }
 
-function PlotCard({
+function PlotCardInner({
   plot,
   floorplanImage,
-  index,
+  clickable,
 }: {
   plot: Plot;
   floorplanImage?: string;
-  index: number;
+  clickable: boolean;
 }) {
   const isSoldOrReserved = plot.status === "Sold" || plot.status === "Reserved";
 
   return (
-    <MotionWrapper variant="fadeUp" delay={index * 80}>
-      <motion.div
-        whileHover={
-          isSoldOrReserved ? {} : { y: -4, transition: { type: "spring", stiffness: 300 } }
-        }
+    <motion.div
+      whileHover={
+        clickable ? { y: -4, transition: { type: "spring", stiffness: 300 } } : {}
+      }
+    >
+      <Card
+        className={`group relative overflow-hidden border-0 bg-white ring-1 transition-shadow duration-300 hover:shadow-lg ${
+          isSoldOrReserved
+            ? "opacity-60 ring-[#e5e5e5]"
+            : "ring-cream-dark hover:ring-gold/40"
+        } ${clickable ? "cursor-pointer" : ""}`}
       >
-        <Card
-          className={`overflow-hidden border-0 bg-white ring-1 transition-shadow duration-300 hover:shadow-lg ${
-            isSoldOrReserved
-              ? "opacity-60 ring-[#e5e5e5]"
-              : "ring-cream-dark hover:ring-gold/30"
-          }`}
-        >
-          {/* Floorplan thumbnail */}
-          {floorplanImage && (
-            <div className="relative aspect-[3/2] bg-cream">
-              <Image
-                src={floorplanImage}
-                alt={`${plot.name ?? `Plot ${plot.plot}`} floorplan`}
-                fill
-                className="object-contain p-4"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
-              />
-            </div>
-          )}
-
-          <CardHeader className="pb-0">
-            <div className="flex items-start justify-between gap-3">
-              <CardTitle className="font-heading text-lg tracking-wide text-charcoal">
-                {plot.name ?? `Plot ${plot.plot}`}
-              </CardTitle>
-              {getStatusBadge(plot.status)}
-            </div>
-          </CardHeader>
-
-          <CardContent>
-            <div className="flex flex-col gap-3">
-              {/* Type and size */}
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[#666]">
-                <span>{plot.type}</span>
-                <span className="text-cream-dark">|</span>
-                <span>{plot.size}</span>
+        {/* Floorplan thumbnail */}
+        {floorplanImage && (
+          <div className="relative aspect-[3/2] bg-cream">
+            <Image
+              src={floorplanImage}
+              alt={`${plot.name ?? `Plot ${plot.plot}`} floorplan`}
+              fill
+              className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px"
+            />
+            {clickable && (
+              <div className="pointer-events-none absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 text-charcoal opacity-0 ring-1 ring-gold/30 transition-opacity duration-200 group-hover:opacity-100">
+                <ChevronRight className="h-4 w-4" />
               </div>
+            )}
+          </div>
+        )}
 
-              {/* Floor */}
-              {plot.floor && (
-                <p className="text-xs tracking-wide text-[#999] uppercase">
-                  {plot.floor}
-                </p>
-              )}
+        <CardHeader className="pb-0">
+          <div className="flex items-start justify-between gap-3">
+            <CardTitle className="font-heading text-lg tracking-wide text-charcoal">
+              {plot.name ?? `Plot ${plot.plot}`}
+            </CardTitle>
+            {getStatusBadge(plot.status)}
+          </div>
+        </CardHeader>
 
-              {/* Features */}
-              {plot.features && plot.features.length > 0 && (
-                <div className="flex flex-wrap gap-1.5 pt-1">
-                  {plot.features.map((feature) => (
-                    <Badge
-                      key={feature}
-                      variant="outline"
-                      className="border-cream-dark bg-cream/50 px-2 py-0.5 text-[10px] tracking-wider text-[#777] uppercase"
-                    >
-                      {feature}
-                    </Badge>
-                  ))}
-                </div>
-              )}
+        <CardContent>
+          <div className="flex flex-col gap-3">
+            {/* Type and size */}
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[#666]">
+              <span>{plot.type}</span>
+              <span className="text-cream-dark">|</span>
+              <span>{plot.size}</span>
             </div>
-          </CardContent>
-        </Card>
-      </motion.div>
+
+            {/* Floor */}
+            {plot.floor && (
+              <p className="text-xs tracking-wide text-[#999] uppercase">
+                {plot.floor}
+              </p>
+            )}
+
+            {/* Features */}
+            {plot.features && plot.features.length > 0 && (
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {plot.features.map((feature) => (
+                  <Badge
+                    key={feature}
+                    variant="outline"
+                    className="border-cream-dark bg-cream/50 px-2 py-0.5 text-[10px] tracking-wider text-[#777] uppercase"
+                  >
+                    {feature}
+                  </Badge>
+                ))}
+              </div>
+            )}
+
+            {/* View details hint */}
+            {clickable && (
+              <div className="flex items-center gap-1 pt-1 text-[11px] tracking-[0.25em] text-gold/70 uppercase opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                View details
+                <ChevronRight className="h-3 w-3" />
+              </div>
+            )}
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
+  );
+}
+
+function PlotCard({
+  plot,
+  floorplanImage,
+  index,
+  developmentName,
+}: {
+  plot: Plot;
+  floorplanImage?: string;
+  index: number;
+  developmentName: string;
+}) {
+  const isSold = plot.status === "Sold";
+  const clickable = !isSold;
+
+  return (
+    <MotionWrapper variant="fadeUp" delay={index * 80}>
+      {clickable ? (
+        <PlotDetailDialog
+          plot={plot}
+          floorplanImage={floorplanImage}
+          developmentName={developmentName}
+        >
+          <PlotCardInner
+            plot={plot}
+            floorplanImage={floorplanImage}
+            clickable
+          />
+        </PlotDetailDialog>
+      ) : (
+        <PlotCardInner
+          plot={plot}
+          floorplanImage={floorplanImage}
+          clickable={false}
+        />
+      )}
     </MotionWrapper>
   );
 }
@@ -138,6 +191,7 @@ function PlotCard({
 export function AvailabilitySection({
   plots,
   floorplanImages,
+  developmentName,
 }: AvailabilitySectionProps) {
   // Group plots by floor
   const floors = new Map<string, Plot[]>();
@@ -186,6 +240,7 @@ export function AvailabilitySection({
                     plot={plot}
                     floorplanImage={fp}
                     index={idx}
+                    developmentName={developmentName}
                   />
                 );
               })}

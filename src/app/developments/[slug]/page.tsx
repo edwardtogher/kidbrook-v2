@@ -103,6 +103,7 @@ export default async function DevelopmentPage({
         <AvailabilitySection
           plots={dev.plots}
           floorplanImages={dev.floorplanImages}
+          developmentName={dev.name}
         />
       )}
 
