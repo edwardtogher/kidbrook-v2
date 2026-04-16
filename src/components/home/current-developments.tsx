@@ -8,11 +8,39 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { MotionWrapper } from "@/components/motion-wrapper";
-import type { Development } from "@/data/developments";
+import { getStatusBadgeClasses, type Development } from "@/data/developments";
 
 interface CurrentDevelopmentsProps {
   developments: Development[];
   images: Record<string, string | null>;
+}
+
+/**
+ * Placeholder shown when a development has no imageDir yet.
+ * Dark charcoal tile with the Kidbrook wing mark and name — feels intentional.
+ */
+function ImagePlaceholder({ name }: { name: string }) {
+  return (
+    <div className="relative flex h-full w-full items-center justify-center bg-gradient-to-br from-charcoal via-charcoal-light to-charcoal">
+      {/* Subtle gold corner accent */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(197,169,106,0.15),transparent_60%)]" />
+      <div className="relative flex flex-col items-center gap-3 px-6 text-center">
+        <Image
+          src="/images/kidbrook-logo-transparent.png"
+          alt=""
+          width={80}
+          height={40}
+          className="opacity-60"
+        />
+        <p className="font-heading text-sm tracking-[0.2em] text-gold/80 uppercase">
+          {name}
+        </p>
+        <p className="text-[10px] tracking-[0.3em] text-white/30 uppercase">
+          Photography coming soon
+        </p>
+      </div>
+    </div>
+  );
 }
 
 /**
@@ -31,7 +59,7 @@ function MobileCard({
       <div className="group flex aspect-square flex-col overflow-hidden rounded-md bg-white shadow-sm">
         {/* Image — top ~55% */}
         <div className="relative flex-[11] overflow-hidden">
-          {imgSrc && (
+          {imgSrc ? (
             <Image
               src={imgSrc}
               alt={dev.name}
@@ -39,9 +67,13 @@ function MobileCard({
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="75vw"
             />
+          ) : (
+            <ImagePlaceholder name={dev.name} />
           )}
           {/* Status badge — top-left */}
-          <Badge className="absolute left-3 top-3 border-gold/30 bg-white/90 px-2.5 py-1 text-[9px] tracking-widest text-gold uppercase backdrop-blur-sm">
+          <Badge
+            className={`absolute left-3 top-3 ${getStatusBadgeClasses(dev.status)}`}
+          >
             {dev.status}
           </Badge>
         </div>
@@ -86,8 +118,8 @@ function DesktopCard({
   return (
     <Link href={`/developments/${dev.slug}`} className="block h-full">
       <Card className="group h-full overflow-hidden border-0 bg-white shadow-sm transition-shadow hover:shadow-lg">
-        {imgSrc && (
-          <div className="relative aspect-[16/10] overflow-hidden">
+        <div className="relative aspect-[16/10] overflow-hidden">
+          {imgSrc ? (
             <Image
               src={imgSrc}
               alt={dev.name}
@@ -95,11 +127,13 @@ function DesktopCard({
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 1024px) 50vw, 33vw"
             />
-          </div>
-        )}
+          ) : (
+            <ImagePlaceholder name={dev.name} />
+          )}
+        </div>
 
         <div className="flex flex-col gap-2 p-5">
-          <Badge className="w-fit border-gold/30 bg-gold/10 px-3 py-1 text-[10px] tracking-widest text-gold uppercase">
+          <Badge className={getStatusBadgeClasses(dev.status)}>
             {dev.status}
           </Badge>
 

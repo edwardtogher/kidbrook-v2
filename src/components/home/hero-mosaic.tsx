@@ -71,7 +71,7 @@ export function HeroMosaic() {
         >
           <Link href="#developments">
             <Button className="h-11 w-full rounded-sm bg-gold text-xs tracking-widest text-charcoal uppercase transition-all hover:bg-gold-dark hover:text-white">
-              Developments
+              View Homes
             </Button>
           </Link>
           <a href="tel:01483923693">

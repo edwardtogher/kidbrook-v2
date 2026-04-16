@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Cinzel } from "next/font/google";
 import { FallbackCheck } from "@/components/fallback-check";
 import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 import { currentDevelopments, portfolioDevelopments } from "@/data/developments";
 import "./globals.css";
 
@@ -38,6 +39,7 @@ export default function RootLayout({
           portfolioDevelopments={portfolioDevelopments}
         />
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

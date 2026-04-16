@@ -51,14 +51,28 @@ export function SiteHeader({
         }}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       >
-        {/* Hamburger — always visible */}
-        <button
-          onClick={() => setOpen(true)}
-          aria-label="Open menu"
-          className="flex h-10 w-10 items-center justify-center text-white/80 transition-colors hover:text-gold"
-        >
-          <Menu className="h-5 w-5" />
-        </button>
+        {/* Left: hamburger + phone (desktop, scrolled only) */}
+        <div className="flex items-center gap-6">
+          <button
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
+            className="flex h-10 w-10 items-center justify-center text-white/80 transition-colors hover:text-gold"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
+
+          {/* Phone number — desktop only, fades in when scrolled */}
+          <motion.a
+            href="tel:01483923693"
+            className="hidden font-heading text-xs tracking-widest text-white/60 uppercase transition-colors hover:text-gold md:block"
+            initial={false}
+            animate={{ opacity: scrolled ? 1 : 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            style={{ pointerEvents: scrolled ? "auto" : "none" }}
+          >
+            01483 923 693
+          </motion.a>
+        </div>
 
         {/* Logo — fades in once scrolled */}
         <motion.div
@@ -257,7 +271,7 @@ export function SiteHeader({
                   01483 923 693
                 </Link>
 
-                <a href="mailto:sales@kidbrook.co.uk">
+                <a href="mailto:info@kidbrook.co.uk">
                   <Button className="mt-2 h-11 w-full rounded-sm border-gold bg-gold px-8 text-sm tracking-wider text-charcoal uppercase transition-all hover:bg-gold-dark hover:text-white">
                     Enquire Now
                   </Button>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -49,7 +49,7 @@ function MobileCard({
           </div>
 
           <div className="flex items-center gap-2 text-[10px] font-semibold tracking-[0.25em] text-gold uppercase transition-colors group-hover:text-gold-dark">
-            View Project
+            Find out more
             <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
           </div>
         </div>
@@ -102,8 +102,12 @@ export function PortfolioGrid({ developments, images }: PortfolioGridProps) {
     (d): d is Development & { slug: string } => Boolean(images[d.slug])
   );
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const [showAll, setShowAll] = useState(false);
 
   if (withImages.length === 0) return null;
+
+  const desktopVisible = showAll ? withImages : withImages.slice(0, 6);
+  const hasMore = withImages.length > 6;
 
   const scrollByCard = (direction: 1 | -1) => {
     const el = scrollerRef.current;
@@ -170,12 +174,28 @@ export function PortfolioGrid({ developments, images }: PortfolioGridProps) {
         {/* Desktop: tile grid */}
         <div className="hidden px-6 sm:block">
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
-            {withImages.slice(0, 6).map((dev, i) => (
+            {desktopVisible.map((dev, i) => (
               <MotionWrapper key={dev.slug} variant="fadeUp" delay={i * 80}>
                 <DesktopTile dev={dev} imgSrc={images[dev.slug]!} />
               </MotionWrapper>
             ))}
           </div>
+
+          {hasMore && (
+            <div className="mt-12 flex justify-center">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="group inline-flex items-center gap-3 border-b border-gold/40 pb-1 font-heading text-xs tracking-[0.3em] text-gold uppercase transition-colors hover:border-gold hover:text-gold-light"
+              >
+                {showAll ? "Show Fewer" : "View Full Portfolio"}
+                <ArrowRight
+                  className={`h-3 w-3 transition-transform ${
+                    showAll ? "rotate-180" : "group-hover:translate-x-1"
+                  }`}
+                />
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

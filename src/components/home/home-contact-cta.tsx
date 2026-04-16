@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MotionWrapper } from "@/components/motion-wrapper";
@@ -33,9 +34,11 @@ export function HomeContactCta() {
 
         <MotionWrapper variant="fadeUp" delay={400}>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Button className="h-12 w-full rounded-sm border-gold bg-gold px-10 text-sm tracking-wider text-charcoal uppercase transition-all hover:bg-gold-dark hover:text-white sm:w-auto">
-              Register Interest
-            </Button>
+            <Link href="/contact" className="w-full sm:w-auto">
+              <Button className="h-12 w-full rounded-sm border-gold bg-gold px-10 text-sm tracking-wider text-charcoal uppercase transition-all hover:bg-gold-dark hover:text-white sm:w-auto">
+                Register Interest
+              </Button>
+            </Link>
             <a href="tel:01483923693">
               <Button
                 variant="outline"
@@ -56,10 +59,10 @@ export function HomeContactCta() {
               01483 923 693
             </a>
             <a
-              href="mailto:sales@kidbrook.co.uk"
+              href="mailto:info@kidbrook.co.uk"
               className="transition-colors hover:text-gold"
             >
-              sales@kidbrook.co.uk
+              info@kidbrook.co.uk
             </a>
           </div>
         </MotionWrapper>

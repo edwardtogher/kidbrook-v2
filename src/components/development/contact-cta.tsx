@@ -61,10 +61,10 @@ export function ContactCta({ developmentName }: ContactCtaProps) {
               01483 923 693
             </a>
             <a
-              href="mailto:sales@kidbrook.co.uk"
+              href="mailto:info@kidbrook.co.uk"
               className="transition-colors hover:text-gold"
             >
-              sales@kidbrook.co.uk
+              info@kidbrook.co.uk
             </a>
           </div>
         </MotionWrapper>

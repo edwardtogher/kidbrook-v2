@@ -50,7 +50,7 @@ export function PlotDetailDialog({
 }: PlotDetailDialogProps) {
   const enquireSubject = `Enquiry: ${plot.name ?? `Plot ${plot.plot}`} at ${developmentName}`;
   const enquireBody = `Hi,\n\nI would like to enquire about ${plot.name ?? `Plot ${plot.plot}`} (${plot.type}, ${plot.size}) at ${developmentName}.\n\nPlease get in touch.\n\nThank you.`;
-  const mailto = `mailto:sales@kidbrook.co.uk?subject=${encodeURIComponent(enquireSubject)}&body=${encodeURIComponent(enquireBody)}`;
+  const mailto = `mailto:info@kidbrook.co.uk?subject=${encodeURIComponent(enquireSubject)}&body=${encodeURIComponent(enquireBody)}`;
 
   return (
     <Dialog>

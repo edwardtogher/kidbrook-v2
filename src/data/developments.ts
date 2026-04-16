@@ -105,3 +105,27 @@ export function getPlotStatusStyle(status: string): string {
   if (status === "Price on application") return "text-white/40 italic";
   return "text-[#C5A96A] font-semibold"; // Price shown
 }
+
+/**
+ * Tailwind classes for the development-level status badge shown on cards.
+ * - Gold (active/exciting): Taking Reservations, Show Homes Open, Selling Now
+ * - Muted (unavailable): Sold Out, Completed
+ * - Neutral (future): Coming Soon
+ */
+export function getStatusBadgeClasses(status: DevelopmentStatus): string {
+  const base =
+    "w-fit px-2.5 py-1 text-[9px] tracking-widest uppercase backdrop-blur-sm";
+
+  switch (status) {
+    case "Sold Out":
+    case "Completed":
+      return `${base} border-white/20 bg-white/80 text-charcoal/60`;
+    case "Coming Soon":
+      return `${base} border-cream/40 bg-cream/90 text-charcoal/70`;
+    case "Taking Reservations":
+    case "Show Homes Open":
+    case "Selling Now":
+    default:
+      return `${base} border-gold/30 bg-white/90 text-gold`;
+  }
+}
