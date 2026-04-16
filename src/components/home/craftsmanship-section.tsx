@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { MotionWrapper } from "@/components/motion-wrapper";
@@ -46,9 +47,11 @@ export function CraftsmanshipSection() {
             </ul>
 
             <div className="mt-2">
-              <Button className="h-11 rounded-sm border-gold bg-gold px-8 text-sm tracking-wider text-charcoal uppercase transition-all hover:bg-gold-dark hover:text-white">
-                View Specification
-              </Button>
+              <Link href="/contact">
+                <Button className="h-11 rounded-sm border-gold bg-gold px-8 text-sm tracking-wider text-charcoal uppercase transition-all hover:bg-gold-dark hover:text-white">
+                  Request a Brochure
+                </Button>
+              </Link>
             </div>
           </div>
         </MotionWrapper>
