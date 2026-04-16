@@ -138,3 +138,23 @@
     @apply font-sans;
   }
 }
+
+/* Framer Motion fallback: when document is hidden (preview panes, background
+   tabs) rAF never fires so animations stay at initial opacity:0. Force
+   content visible and remove the translateY/X offsets. Next.js Image fill
+   relies on inline styles too, so we scope narrowly to avoid breaking it. */
+:root.fm-fallback main [style*="opacity"] {
+  opacity: 1 !important;
+}
+:root.fm-fallback main section [style*="translate"] {
+  transform: none !important;
+}
+
+/* Hide scrollbar on horizontal swipe carousels while keeping scroll functional */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

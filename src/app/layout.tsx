@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Cinzel } from "next/font/google";
+import { FallbackCheck } from "@/components/fallback-check";
+import { SiteHeader } from "@/components/site-header";
+import { currentDevelopments, portfolioDevelopments } from "@/data/developments";
 import "./globals.css";
 
 const geist = Geist({
@@ -28,7 +31,14 @@ export default function RootLayout({
       lang="en"
       className={`${geist.variable} ${cinzel.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <FallbackCheck />
+        <SiteHeader
+          currentDevelopments={currentDevelopments}
+          portfolioDevelopments={portfolioDevelopments}
+        />
+        {children}
+      </body>
     </html>
   );
 }
