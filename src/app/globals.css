@@ -158,3 +158,141 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+
+/* ----------------------------------------------------------------------- */
+/* Light-theme overrides — applied when <body> has .theme-light class.
+   Inverts the homepage palette: charcoal ↔ cream, cream ↔ charcoal,
+   gold → gold-dark. Scoped to `body.theme-light main` so only homepage
+   content is affected (modals, portals etc. unaffected).
+   These rules sit after @import "tailwindcss" so their specificity
+   (ancestor .theme-light main + target .class = 3 classes) beats
+   Tailwind utilities (1 class). No !important needed. */
+/* ----------------------------------------------------------------------- */
+
+body.theme-light { background: #F5F3EF; }
+
+body.theme-light main.bg-charcoal { background-color: #F5F3EF; color: #231F20; }
+body.theme-light main .bg-charcoal { background-color: #F5F3EF; }
+body.theme-light main .bg-cream { background-color: #231F20; }
+body.theme-light main .bg-dark { background-color: #F0EDE5; }
+
+/* Cream → charcoal (text) */
+body.theme-light main .text-cream { color: #231F20; }
+body.theme-light main .text-cream\/95 { color: rgb(35 31 32 / 0.95); }
+body.theme-light main .text-cream\/80 { color: rgb(35 31 32 / 0.8); }
+body.theme-light main .text-cream\/70 { color: rgb(35 31 32 / 0.7); }
+body.theme-light main .text-cream\/60 { color: rgb(35 31 32 / 0.6); }
+body.theme-light main .text-cream\/55 { color: rgb(35 31 32 / 0.55); }
+body.theme-light main .text-cream\/40 { color: rgb(35 31 32 / 0.4); }
+body.theme-light main .text-cream\/30 { color: rgb(35 31 32 / 0.3); }
+
+/* Charcoal → cream (text) — for sections that were cream in dark mode */
+body.theme-light main .text-charcoal { color: #F5F3EF; }
+body.theme-light main .text-charcoal\/80 { color: rgb(245 243 239 / 0.8); }
+body.theme-light main .text-charcoal\/60 { color: rgb(245 243 239 / 0.6); }
+
+/* Borders */
+body.theme-light main .border-cream\/15 { border-color: rgb(35 31 32 / 0.15); }
+body.theme-light main .border-cream\/10 { border-color: rgb(35 31 32 / 0.1); }
+body.theme-light main .border-cream\/20 { border-color: rgb(35 31 32 / 0.2); }
+body.theme-light main .border-cream\/25 { border-color: rgb(35 31 32 / 0.25); }
+body.theme-light main .border-cream\/40 { border-color: rgb(35 31 32 / 0.4); }
+body.theme-light main .border-cream\/60 { border-color: rgb(35 31 32 / 0.6); }
+body.theme-light main .border-charcoal\/10 { border-color: rgb(245 243 239 / 0.1); }
+body.theme-light main .border-charcoal\/20 { border-color: rgb(245 243 239 / 0.2); }
+body.theme-light main .border-t.border-cream\/15 { border-color: rgb(35 31 32 / 0.15); }
+
+/* Gold swap — brighter gold on light, darker gold on light-on-dark */
+body.theme-light main .text-gold { color: #A68B4B; }
+body.theme-light main .text-gold\/70 { color: rgb(166 139 75 / 0.7); }
+body.theme-light main .text-gold-dark { color: #C5A96A; }
+
+/* Divider colour swap */
+body.theme-light main .divide-cream\/10 > :not([hidden]) ~ :not([hidden]) {
+  border-color: rgb(35 31 32 / 0.1);
+}
+
+/* Placeholder blocks / hover washes */
+body.theme-light main .bg-charcoal\/10 { background-color: rgb(245 243 239 / 0.1); }
+body.theme-light main .bg-cream\/5 { background-color: rgb(35 31 32 / 0.05); }
+body.theme-light main .bg-cream\/\[0\.04\] { background-color: rgb(35 31 32 / 0.04); }
+body.theme-light main .hover\:bg-cream\/\[0\.04\]:hover { background-color: rgb(35 31 32 / 0.04); }
+
+/* William portrait placeholder gradient (dark → cream) */
+body.theme-light main .from-charcoal\/80 { --tw-gradient-from: rgb(245 243 239 / 0.8); }
+body.theme-light main .to-charcoal { --tw-gradient-to: #F5F3EF; }
+
+/* Hero is marked data-static-theme — restore cream text/dark bg inside it
+   even in light mode (it sits on a dark photo gradient so legibility demands
+   cream text regardless of page theme). These rules come last so they win. */
+body.theme-light main [data-static-theme] { background-color: #231F20; color: #F5F3EF; }
+body.theme-light main [data-static-theme] .bg-charcoal { background-color: #231F20; }
+body.theme-light main [data-static-theme] .text-cream { color: #F5F3EF; }
+body.theme-light main [data-static-theme] .text-cream\/95 { color: rgb(245 243 239 / 0.95); }
+body.theme-light main [data-static-theme] .text-cream\/80 { color: rgb(245 243 239 / 0.8); }
+body.theme-light main [data-static-theme] .text-cream\/70 { color: rgb(245 243 239 / 0.7); }
+body.theme-light main [data-static-theme] .text-cream\/60 { color: rgb(245 243 239 / 0.6); }
+body.theme-light main [data-static-theme] .text-cream\/40 { color: rgb(245 243 239 / 0.4); }
+body.theme-light main [data-static-theme] .text-cream\/30 { color: rgb(245 243 239 / 0.3); }
+body.theme-light main [data-static-theme] .text-charcoal { color: #231F20; }
+body.theme-light main [data-static-theme] .border-cream\/60 { border-color: rgb(245 243 239 / 0.6); }
+body.theme-light main [data-static-theme] .border-cream\/40 { border-color: rgb(245 243 239 / 0.4); }
+body.theme-light main [data-static-theme] .text-gold { color: #C5A96A; }
+body.theme-light main [data-static-theme] .hover\:text-charcoal:hover { color: #231F20; }
+body.theme-light main [data-static-theme] .hover\:bg-cream:hover { background-color: #F5F3EF; }
+/* ----------------------------------------------------------------------- */
+/* Theme-light — extend the inversion to the nav (header) and dialog
+   portals, so the whole screen flips together. Dialog + nav are rendered
+   outside <main>, so the main-scoped rules above don't reach them. */
+/* ----------------------------------------------------------------------- */
+
+body.theme-light :is(header, [data-slot="dialog-content"]) { background-color: #F5F3EF; color: #231F20; }
+body.theme-light :is(header, [data-slot="dialog-content"]).bg-charcoal { background-color: #F5F3EF; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .bg-charcoal { background-color: #F5F3EF; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .bg-cream { background-color: #231F20; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .bg-cream-dark { background-color: #332E2F; }
+
+/* Cream → charcoal text inside nav + dialog */
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream { color: #231F20; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream\/80 { color: rgb(35 31 32 / 0.8); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream\/70 { color: rgb(35 31 32 / 0.7); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream\/60 { color: rgb(35 31 32 / 0.6); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream\/55 { color: rgb(35 31 32 / 0.55); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream\/40 { color: rgb(35 31 32 / 0.4); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-cream\/30 { color: rgb(35 31 32 / 0.3); }
+
+/* Charcoal → cream text — for nav elements that start charcoal, and for inverted moments */
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-charcoal { color: #F5F3EF; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-charcoal\/80 { color: rgb(245 243 239 / 0.8); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-charcoal\/70 { color: rgb(245 243 239 / 0.7); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-charcoal\/60 { color: rgb(245 243 239 / 0.6); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-charcoal\/40 { color: rgb(245 243 239 / 0.4); }
+
+/* Borders */
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream { border-color: rgb(35 31 32 / 1); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream\/80 { border-color: rgb(35 31 32 / 0.8); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream\/30 { border-color: rgb(35 31 32 / 0.3); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream\/25 { border-color: rgb(35 31 32 / 0.25); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream\/20 { border-color: rgb(35 31 32 / 0.2); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream\/15 { border-color: rgb(35 31 32 / 0.15); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-cream\/10 { border-color: rgb(35 31 32 / 0.1); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-charcoal\/30 { border-color: rgb(245 243 239 / 0.3); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-charcoal\/20 { border-color: rgb(245 243 239 / 0.2); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .border-charcoal\/10 { border-color: rgb(245 243 239 / 0.1); }
+
+/* Divide lines */
+body.theme-light :is(header, [data-slot="dialog-content"]) .divide-cream\/20 > :not([hidden]) ~ :not([hidden]) { border-color: rgb(35 31 32 / 0.2); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .divide-cream\/15 > :not([hidden]) ~ :not([hidden]) { border-color: rgb(35 31 32 / 0.15); }
+
+/* Rings */
+body.theme-light :is(header, [data-slot="dialog-content"]) .ring-cream\/20 { --tw-ring-color: rgb(35 31 32 / 0.2); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .ring-cream\/10 { --tw-ring-color: rgb(35 31 32 / 0.1); }
+
+/* Gold shade swap — darker gold reads better on cream */
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-gold { color: #A68B4B; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .text-gold-dark { color: #C5A96A; }
+
+/* Hover washes */
+body.theme-light :is(header, [data-slot="dialog-content"]) .hover\:bg-cream\/\[0\.05\]:hover { background-color: rgb(35 31 32 / 0.05); }
+body.theme-light :is(header, [data-slot="dialog-content"]) .hover\:bg-charcoal:hover { background-color: #F5F3EF; }
+body.theme-light :is(header, [data-slot="dialog-content"]) .hover\:text-cream:hover { color: #231F20; }

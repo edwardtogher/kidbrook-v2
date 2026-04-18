@@ -7,7 +7,7 @@ import {
 } from "@/data/developments";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { SeraNav } from "@/components/sera-nav";
+import HeroMap from "@/components/hero-map";
 
 const CLEAN_IMAGES: Record<string, string> = {
   "shalford-lodge": "/images/watercolors/shalford-photorealistic.png",
@@ -18,12 +18,12 @@ const CLEAN_IMAGES: Record<string, string> = {
 };
 
 export const metadata: Metadata = {
-  title: "Kidbrook Homes | Premium New Build Homes in Surrey & London",
+  title: "Hero map preview | Kidbrook Homes",
   description:
-    "Kidbrook Homes — family-run residential developer building premium new homes across Surrey, Hampshire and South West London since 2005.",
+    "Interactive SE England map hero — option 3 preview with the full homepage content below.",
 };
 
-export default function HomePage() {
+export default function HeroMapPreviewPage() {
   const currentImages: Record<string, string | null> = {};
   for (const dev of currentDevelopments) {
     currentImages[dev.slug] = CLEAN_IMAGES[dev.slug] ?? null;
@@ -42,72 +42,11 @@ export default function HomePage() {
       `}</style>
 
       <main className="bg-charcoal text-cream font-sans">
-        <SeraNav
-          currentDevelopments={currentDevelopments}
-          portfolioDevelopments={portfolioDevelopments}
-        />
-
-        {/* Hero — cinematic full-bleed. Marked `data-static-theme` so the
-            light-mode CSS overrides skip it — the overlay text sits on a dark
-            gradient regardless of the page theme. */}
-        <section
-          data-static-theme
-          className="relative h-svh min-h-[620px] w-full overflow-hidden bg-charcoal"
-        >
-          <Image
-            src="/images/watercolors/shalford-photorealistic.png"
-            alt="Shalford Lodge, Kingston Hill"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Dark gradient for legibility */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/55 via-black/20 to-black/80" />
-
-          {/* Overlay content */}
-          <div className="relative z-10 flex h-full flex-col items-center justify-center px-5 pt-16 text-center sm:px-8 sm:pt-20">
-            <Image
-              src="/images/kidbrook-logo-best.png"
-              alt="Kidbrook Homes"
-              width={637}
-              height={259}
-              priority
-              className="h-auto w-[clamp(220px,26vw,360px)] drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
-            />
-            <p className="mt-8 max-w-2xl text-[12px] uppercase tracking-[0.32em] text-cream/95 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:mt-10 sm:text-[14px]">
-              Premium new homes, built in small numbers since 2005.{" "}
-              <br className="hidden sm:inline" />
-              Surrey &middot; Hampshire &middot; South&nbsp;West&nbsp;London.
-            </p>
-            <div className="mt-10 flex flex-col items-center gap-4 sm:mt-12 sm:flex-row sm:gap-6">
-              <Link href="#current">
-                <Button className="h-12 rounded-none border border-gold bg-gold px-8 text-[11px] tracking-[0.32em] text-charcoal uppercase hover:bg-gold-dark">
-                  View current homes
-                </Button>
-              </Link>
-              <Link href="#contact">
-                <Button
-                  variant="outline"
-                  className="h-12 rounded-none border-cream/60 bg-transparent px-8 text-[11px] tracking-[0.32em] text-cream uppercase hover:border-cream hover:bg-cream hover:text-charcoal"
-                >
-                  Book a viewing
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Scroll cue */}
-          <div className="absolute bottom-7 left-1/2 z-10 -translate-x-1/2 text-center">
-            <div className="font-mono text-[9px] uppercase tracking-[0.35em] text-cream/60">
-              Scroll
-            </div>
-            <div className="mx-auto mt-2 h-6 w-px bg-cream/40" />
-          </div>
-        </section>
+        {/* Map hero — replaces the logo+tagline block and has its own nav */}
+        <HeroMap />
 
         {/* Credibility strip */}
-        <section className="border-b border-cream/15 bg-charcoal">
+        <section className="border-y border-cream/15 bg-charcoal">
           <div className="mx-auto max-w-[1400px] px-5 py-10 sm:px-8 sm:py-12">
             <div className="grid grid-cols-3 gap-4 sm:gap-10 text-center">
               <div className="flex flex-col gap-2">
@@ -231,13 +170,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About — signed block with William photo */}
+        {/* About */}
         <section className="border-b border-cream/15 bg-cream text-charcoal">
           <div className="mx-auto max-w-[1400px] px-5 py-16 sm:px-8 sm:py-24">
             <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-16">
               <div className="md:col-span-5">
                 <div className="relative aspect-[4/5] w-full overflow-hidden bg-charcoal/10">
-                  {/* TODO: replace with real portrait of William Togher (MD) */}
                   <div className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-charcoal/80 to-charcoal text-center">
                     <span className="font-heading text-[clamp(1.75rem,3vw,2.5rem)] tracking-wider text-gold">
                       William Togher
@@ -251,7 +189,6 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-
               <div className="md:col-span-7 md:pl-4">
                 <div className="text-[10px] uppercase tracking-[0.3em] text-gold-dark">
                   About Kidbrook
@@ -264,17 +201,14 @@ export default function HomePage() {
                     Kidbrook Homes was founded in 2005 by William Togher.
                     Since then we&rsquo;ve delivered {totalDelivered}{" "}
                     residential developments across Surrey, Hampshire and South
-                    West London &mdash; everything from village infills and
-                    single country houses to multi-home private estates.
+                    West London.
                   </p>
                   <p>
                     We&rsquo;re not a volume builder. Every scheme goes through
                     the same team, to the same standard, chosen for the
-                    specific site. It&rsquo;s why buyers come back and why the
-                    same tradespeople have been with us for two decades.
+                    specific site.
                   </p>
                 </div>
-
                 <div className="mt-10 flex flex-wrap items-center gap-8">
                   <div>
                     <div className="font-heading text-[20px] italic leading-none tracking-wide text-charcoal">
@@ -307,7 +241,6 @@ export default function HomePage() {
                 {totalPortfolio} completed
               </div>
             </div>
-
             <div className="grid grid-cols-2 gap-x-6 gap-y-0 border-t border-cream/15 md:grid-cols-3">
               {portfolioDevelopments.map((dev, i) => {
                 const [, town] = dev.location.split(",").map((s) => s.trim());
@@ -365,17 +298,6 @@ export default function HomePage() {
                       land@kidbrook.co.uk
                     </Button>
                   </a>
-                  <a
-                    href="tel:01483923693"
-                    className="text-[11px] uppercase tracking-[0.28em] text-cream/70 underline decoration-1 underline-offset-[6px] hover:text-gold"
-                  >
-                    01483 923 693
-                  </a>
-                </div>
-                <div className="mt-8 grid grid-cols-2 gap-6 border-t border-cream/15 pt-6 text-[11px] uppercase tracking-[0.28em] text-cream/60 sm:grid-cols-3">
-                  <div>Single plots &amp; infills</div>
-                  <div>Multi-acre sites</div>
-                  <div>Planning promotion</div>
                 </div>
               </div>
             </div>
@@ -390,18 +312,8 @@ export default function HomePage() {
                 Get in touch
               </h2>
               <div className="flex flex-col items-center gap-5 text-[12px] uppercase tracking-[0.28em] text-cream sm:flex-row sm:gap-10 sm:text-[13px]">
-                <a
-                  href="tel:01483923693"
-                  className="underline decoration-1 underline-offset-[6px] hover:text-gold hover:decoration-2"
-                >
-                  01483 923 693
-                </a>
-                <a
-                  href="mailto:enquiries@kidbrook.co.uk"
-                  className="underline decoration-1 underline-offset-[6px] hover:text-gold hover:decoration-2"
-                >
-                  enquiries@kidbrook.co.uk
-                </a>
+                <a href="tel:01483923693" className="underline decoration-1 underline-offset-[6px] hover:text-gold">01483 923 693</a>
+                <a href="mailto:enquiries@kidbrook.co.uk" className="underline decoration-1 underline-offset-[6px] hover:text-gold">enquiries@kidbrook.co.uk</a>
               </div>
               <Link href="/contact">
                 <Button className="h-11 rounded-none border border-gold bg-gold px-8 text-[11px] tracking-[0.3em] text-charcoal uppercase hover:bg-gold-dark">
@@ -412,42 +324,18 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Footer with certification badges */}
+        {/* Footer */}
         <footer className="border-t border-cream/15 bg-charcoal">
-          <div className="mx-auto max-w-[1400px] px-5 py-10 sm:px-8 sm:py-12">
-            <div className="mb-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-5 border-b border-cream/15 pb-8 text-center sm:mb-12 sm:gap-x-14">
-              <CertBadge top="NHBC" bottom="Registered" />
-              <CertBadge top="Consumer Code" bottom="for Home Builders" />
-              <CertBadge top="HBF" bottom="Home Builders Federation" />
-              <CertBadge top="New Homes" bottom="Quality Board" />
-            </div>
-
+          <div className="mx-auto max-w-[1400px] px-5 py-8 sm:px-8 sm:py-10">
             <div className="flex flex-col items-center justify-between gap-3 text-[10px] uppercase tracking-[0.3em] text-cream/55 sm:flex-row">
               <span>Kidbrook Homes Ltd &mdash; Est. 2005</span>
-              <span className="text-cream/40">Registered in England</span>
-              <Link
-                href="/contact"
-                className="underline decoration-1 underline-offset-4 hover:text-gold"
-              >
-                Contact
+              <Link href="/" className="underline decoration-1 underline-offset-4 hover:text-gold">
+                Cinematic hero version
               </Link>
             </div>
           </div>
         </footer>
       </main>
     </>
-  );
-}
-
-function CertBadge({ top, bottom }: { top: string; bottom: string }) {
-  return (
-    <div className="flex flex-col items-center gap-1 rounded-none border border-cream/25 px-5 py-3 min-w-[140px]">
-      <span className="font-heading text-[13px] tracking-wider text-gold">
-        {top}
-      </span>
-      <span className="text-[9px] uppercase tracking-[0.25em] text-cream/60">
-        {bottom}
-      </span>
-    </div>
   );
 }

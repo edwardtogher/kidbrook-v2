@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { ThemeToggle } from "@/components/theme-toggle";
 import type { Development } from "@/data/developments";
 
 interface SeraNavProps {
@@ -55,7 +56,7 @@ export function SeraNav({
           </Link>
         </div>
 
-        <div className="hidden items-center gap-6 md:flex">
+        <div className="hidden items-center gap-4 md:flex">
           <Link
             href="/contact"
             className="text-[11px] uppercase tracking-[0.28em] text-cream/70 transition-colors hover:text-gold"
@@ -69,8 +70,11 @@ export function SeraNav({
           >
             Book Appointment
           </Link>
+          <ThemeToggle className="ml-2" />
         </div>
-        <div className="md:hidden" />
+        <div className="md:hidden flex items-center">
+          <ThemeToggle />
+        </div>
       </header>
 
       <AnimatePresence>
