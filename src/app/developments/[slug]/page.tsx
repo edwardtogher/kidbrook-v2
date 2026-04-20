@@ -4,7 +4,13 @@ import type { Metadata } from "next";
 import { SeraNav } from "@/components/sera-nav";
 import { PlotDialog } from "@/components/development/plot-dialog";
 import { Gallery } from "@/components/development/gallery";
-import { getAllSlugs, getDevData, getNavDevelopments } from "@/lib/data-source";
+import {
+  currentDevelopments,
+  portfolioDevelopments,
+  allDevelopments,
+  getDevelopmentBySlug,
+} from "@/data/developments";
+import { getCategorizedImages } from "@/lib/images";
 
 // ---------------------------------------------------------------------------
 // Sera × Kidbrook — Development page (dynamic route).
@@ -20,9 +26,8 @@ export const revalidate = 30;
 const availGrid =
   "grid grid-cols-[52px_minmax(0,1.6fr)_minmax(0,1.3fr)_minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.9fr)] items-baseline gap-x-4";
 
-export async function generateStaticParams() {
-  const slugs = await getAllSlugs();
-  return slugs.map((slug) => ({ slug }));
+export function generateStaticParams() {
+  return allDevelopments.map((d) => ({ slug: d.slug }));
 }
 
 export async function generateMetadata({
@@ -31,9 +36,8 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const result = await getDevData(slug);
-  if (!result) return {};
-  const { dev } = result;
+  const dev = getDevelopmentBySlug(slug);
+  if (!dev) return {};
 
   const [, town] = dev.location.split(",").map((s) => s.trim());
   const titleSuffix = town ? `, ${town}` : "";
@@ -50,12 +54,12 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const [result, nav] = await Promise.all([
-    getDevData(slug),
-    getNavDevelopments(),
-  ]);
-  if (!result) notFound();
-  const { dev, images } = result;
+  const dev = getDevelopmentBySlug(slug);
+  if (!dev) notFound();
+
+  const images = dev.imageDir
+    ? getCategorizedImages(dev.imageDir)
+    : { cgis: [], interiors: [], photos: [] };
 
   // Hero gallery pulls from CGIs + interiors; fall back to photo uploads for
   // developments that don't categorise by filename (most imported data).
@@ -135,8 +139,8 @@ export default async function Page({
 
       <main className="bg-charcoal text-cream font-sans">
         <SeraNav
-          currentDevelopments={nav.current}
-          portfolioDevelopments={nav.portfolio}
+          currentDevelopments={currentDevelopments}
+          portfolioDevelopments={portfolioDevelopments}
           alwaysVisible
         />
 

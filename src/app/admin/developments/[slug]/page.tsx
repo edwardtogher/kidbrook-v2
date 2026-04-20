@@ -7,6 +7,9 @@ import { useMutation, useQuery } from "convex/react";
 import { api } from "@/../convex/_generated/api";
 import { cn } from "@/lib/utils";
 import { GalleryManager } from "@/components/admin/gallery-manager";
+import { SpecificationEditor } from "@/components/admin/specification-editor";
+import { FaqsEditor } from "@/components/admin/faqs-editor";
+import { AreaEditor } from "@/components/admin/area-editor";
 
 const HEADLINE_STATUSES = [
   "Taking Reservations",
@@ -26,7 +29,10 @@ export default function EditDevelopmentPage() {
   const searchParams = useSearchParams();
   const activeTab = (searchParams.get("tab") ?? "details") as
     | "details"
-    | "gallery";
+    | "gallery"
+    | "specification"
+    | "faqs"
+    | "area";
 
   const dev = useQuery(api.admin.getDevelopment, { slug });
   const updateDetails = useMutation(api.admin.updateDevelopmentDetails);
@@ -186,13 +192,43 @@ export default function EditDevelopmentPage() {
           Gallery
         </TabLink>
         <TabButton disabled>Residences (Phase 4)</TabButton>
-        <TabButton disabled>Area</TabButton>
-        <TabButton disabled>FAQs</TabButton>
-        <TabButton disabled>Specification</TabButton>
+        <TabLink
+          href={`/admin/developments/${slug}?tab=specification`}
+          active={activeTab === "specification"}
+        >
+          Specification
+        </TabLink>
+        <TabLink
+          href={`/admin/developments/${slug}?tab=area`}
+          active={activeTab === "area"}
+        >
+          Area
+        </TabLink>
+        <TabLink
+          href={`/admin/developments/${slug}?tab=faqs`}
+          active={activeTab === "faqs"}
+        >
+          FAQs
+        </TabLink>
       </nav>
 
       {activeTab === "gallery" ? (
         <GalleryManager developmentId={dev._id} />
+      ) : activeTab === "specification" ? (
+        <SpecificationEditor
+          developmentId={dev._id}
+          initial={dev.specification}
+        />
+      ) : activeTab === "faqs" ? (
+        <FaqsEditor developmentId={dev._id} initial={dev.faqs} />
+      ) : activeTab === "area" ? (
+        <AreaEditor
+          developmentId={dev._id}
+          initial={{
+            locationInfo: dev.locationInfo,
+            areaGuide: dev.areaGuide,
+          }}
+        />
       ) : (
       <form onSubmit={onSave} className="space-y-6">
         <div className="grid grid-cols-2 gap-6">
