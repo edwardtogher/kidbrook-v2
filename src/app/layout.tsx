@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Cinzel } from "next/font/google";
+import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 import { FallbackCheck } from "@/components/fallback-check";
 import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { SeraFooter } from "@/components/sera-footer";
+import { InquireNowBlock } from "@/components/inquire-now-block";
 import { currentDevelopments, portfolioDevelopments } from "@/data/developments";
+import { ConvexClientProvider } from "./ConvexClientProvider";
 import "./globals.css";
 
 const geist = Geist({
@@ -28,19 +31,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geist.variable} ${cinzel.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        <FallbackCheck />
-        <SiteHeader
-          currentDevelopments={currentDevelopments}
-          portfolioDevelopments={portfolioDevelopments}
-        />
-        {children}
-        <SiteFooter />
-      </body>
-    </html>
+    <ConvexAuthNextjsServerProvider>
+      <html
+        lang="en"
+        className={`${geist.variable} ${cinzel.variable} h-full antialiased`}
+      >
+        <body className="min-h-full flex flex-col">
+          <ConvexClientProvider>
+            <FallbackCheck />
+            <SiteHeader
+              currentDevelopments={currentDevelopments}
+              portfolioDevelopments={portfolioDevelopments}
+            />
+            {children}
+            <InquireNowBlock />
+            <SeraFooter />
+          </ConvexClientProvider>
+        </body>
+      </html>
+    </ConvexAuthNextjsServerProvider>
   );
 }

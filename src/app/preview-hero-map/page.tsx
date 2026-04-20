@@ -37,7 +37,7 @@ export default function HeroMapPreviewPage() {
   return (
     <>
       <style>{`
-        body > header, body > footer { display: none !important; }
+        body > header { display: none !important; }
         body { background: #231F20; }
       `}</style>
 
@@ -324,17 +324,6 @@ export default function HeroMapPreviewPage() {
           </div>
         </section>
 
-        {/* Footer */}
-        <footer className="border-t border-cream/15 bg-charcoal">
-          <div className="mx-auto max-w-[1400px] px-5 py-8 sm:px-8 sm:py-10">
-            <div className="flex flex-col items-center justify-between gap-3 text-[10px] uppercase tracking-[0.3em] text-cream/55 sm:flex-row">
-              <span>Kidbrook Homes Ltd &mdash; Est. 2005</span>
-              <Link href="/" className="underline decoration-1 underline-offset-4 hover:text-gold">
-                Cinematic hero version
-              </Link>
-            </div>
-          </div>
-        </footer>
       </main>
     </>
   );

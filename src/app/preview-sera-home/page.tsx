@@ -76,7 +76,7 @@ export default function SeraHomePreviewPage() {
   return (
     <>
       <style>{`
-        body > header, body > footer { display: none !important; }
+        body > header { display: none !important; }
         body { background: #F5F3EF; }
 
         .sera-details > summary { list-style: none; cursor: pointer; }

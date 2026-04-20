@@ -220,7 +220,9 @@ body.theme-light main .hover\:bg-cream\/\[0\.04\]:hover { background-color: rgb(
 
 /* William portrait placeholder gradient (dark → cream) */
 body.theme-light main .from-charcoal\/80 { --tw-gradient-from: rgb(245 243 239 / 0.8); }
+body.theme-light main .from-charcoal { --tw-gradient-from: #F5F3EF; }
 body.theme-light main .to-charcoal { --tw-gradient-to: #F5F3EF; }
+body.theme-light main .bg-charcoal\/70 { background-color: rgb(245 243 239 / 0.7); }
 
 /* Hero is marked data-static-theme — restore cream text/dark bg inside it
    even in light mode (it sits on a dark photo gradient so legibility demands
