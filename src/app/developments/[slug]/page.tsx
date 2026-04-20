@@ -4,13 +4,7 @@ import type { Metadata } from "next";
 import { SeraNav } from "@/components/sera-nav";
 import { PlotDialog } from "@/components/development/plot-dialog";
 import { Gallery } from "@/components/development/gallery";
-import {
-  currentDevelopments,
-  portfolioDevelopments,
-  allDevelopments,
-  getDevelopmentBySlug,
-} from "@/data/developments";
-import { getCategorizedImages } from "@/lib/images";
+import { getAllSlugs, getDevData, getNavDevelopments } from "@/lib/data-source";
 
 // ---------------------------------------------------------------------------
 // Sera × Kidbrook — Development page (dynamic route).
@@ -26,8 +20,9 @@ export const revalidate = 30;
 const availGrid =
   "grid grid-cols-[52px_minmax(0,1.6fr)_minmax(0,1.3fr)_minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,0.9fr)] items-baseline gap-x-4";
 
-export function generateStaticParams() {
-  return allDevelopments.map((d) => ({ slug: d.slug }));
+export async function generateStaticParams() {
+  const slugs = await getAllSlugs();
+  return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -36,8 +31,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const dev = getDevelopmentBySlug(slug);
-  if (!dev) return {};
+  const result = await getDevData(slug);
+  if (!result) return {};
+  const { dev } = result;
 
   const [, town] = dev.location.split(",").map((s) => s.trim());
   const titleSuffix = town ? `, ${town}` : "";
@@ -54,12 +50,12 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const dev = getDevelopmentBySlug(slug);
-  if (!dev) notFound();
-
-  const images = dev.imageDir
-    ? getCategorizedImages(dev.imageDir)
-    : { cgis: [], interiors: [], photos: [] };
+  const [result, nav] = await Promise.all([
+    getDevData(slug),
+    getNavDevelopments(),
+  ]);
+  if (!result) notFound();
+  const { dev, images } = result;
 
   // Hero gallery pulls from CGIs + interiors; fall back to photo uploads for
   // developments that don't categorise by filename (most imported data).
@@ -70,9 +66,7 @@ export default async function Page({
       ? images.photos
       : []),
   ];
-  const galleryThumbs = [
-    ...galleryAll.slice(0, 4),
-  ];
+  const galleryThumbs = galleryAll.slice(0, 4);
 
   const [, town, city] = dev.location.split(",").map((s) => s.trim());
   const soldCount =
@@ -106,7 +100,6 @@ export default async function Page({
           color: var(--color-gold-dark, #A68B4B);
         }
 
-        /* Section-level accordion — the entire section collapses under its heading */
         .sera-section > summary { list-style: none; cursor: pointer; }
         .sera-section > summary::-webkit-details-marker { display: none; }
         .sera-section > summary::after {
@@ -139,8 +132,8 @@ export default async function Page({
 
       <main className="bg-charcoal text-cream font-sans">
         <SeraNav
-          currentDevelopments={currentDevelopments}
-          portfolioDevelopments={portfolioDevelopments}
+          currentDevelopments={nav.current}
+          portfolioDevelopments={nav.portfolio}
           alwaysVisible
         />
 
@@ -179,7 +172,7 @@ export default async function Page({
           </div>
         </section>
 
-        {/* Gallery — whole section collapses under its heading */}
+        {/* Gallery */}
         {galleryThumbs.length > 0 && (
           <section className="border-b border-cream/20">
             <details className="sera-section">
@@ -204,7 +197,7 @@ export default async function Page({
           </section>
         )}
 
-        {/* About — whole section collapses under its heading */}
+        {/* About */}
         {dev.description && (
           <section id="about" className="border-b border-cream/20">
             <details className="sera-section">
@@ -230,7 +223,7 @@ export default async function Page({
           </section>
         )}
 
-        {/* Residences — whole section collapses under its heading */}
+        {/* Residences */}
         {dev.plots && dev.plots.length > 0 && (
           <section id="residences" className="border-b border-cream/20">
             <details className="sera-section">
@@ -254,132 +247,130 @@ export default async function Page({
                   </span>
                 </div>
 
-              {/* Desktop: grid-based "table" */}
-              <div className="hidden md:block">
-                <div
-                  className={`${availGrid} border-y border-cream/30 py-4 text-[11px] uppercase tracking-[0.3em]`}
-                >
-                  <span>No.</span>
-                  <span>Apartment</span>
-                  <span>Floor</span>
-                  <span>Type</span>
-                  <span>Size</span>
-                  <span className="text-right">Price</span>
-                  <span className="text-right">Status</span>
-                </div>
+                <div className="hidden md:block">
+                  <div
+                    className={`${availGrid} border-y border-cream/30 py-4 text-[11px] uppercase tracking-[0.3em]`}
+                  >
+                    <span>No.</span>
+                    <span>Apartment</span>
+                    <span>Floor</span>
+                    <span>Type</span>
+                    <span>Size</span>
+                    <span className="text-right">Price</span>
+                    <span className="text-right">Status</span>
+                  </div>
 
-                {dev.plots.map((p) => {
-                  const isPrice = /^\d[\d,]*$/.test(p.status);
-                  const isAvailable =
-                    isPrice || p.status === "Price on application";
-                  return (
-                    <PlotDialog
-                      key={p.plot}
-                      plot={p}
-                      floorplanImage={dev.floorplanImages?.[String(p.plot)]}
-                      interiorImages={images.interiors}
-                      developmentName={dev.name}
-                    >
-                      <div
-                        className={`${availGrid} group relative border-b border-cream/15 py-5 transition-all duration-300 ease-out hover:bg-cream/[0.05] hover:pl-4`}
-                      >
-                        <span className="font-mono text-[14px] tabular-nums text-gold transition-colors duration-300">
-                          {String(p.plot).padStart(2, "0")}
-                        </span>
-                        <span className="text-[15px] transition-transform duration-300 group-hover:translate-x-0.5">
-                          {p.name}
-                        </span>
-                        <span className="text-[13px] text-cream/70 transition-colors duration-300 group-hover:text-cream">
-                          {p.floor}
-                        </span>
-                        <span className="text-[13px] text-cream/70 transition-colors duration-300 group-hover:text-cream">
-                          {p.type}
-                        </span>
-                        <span className="font-mono text-[13px] tabular-nums">
-                          {p.size}
-                        </span>
-                        <span className="text-right font-mono text-[15px] tabular-nums">
-                          {isPrice
-                            ? `£${p.status}`
-                            : p.status === "Price on application"
-                              ? "POA"
-                              : "—"}
-                        </span>
-                        <span className="flex items-center justify-end gap-2 text-right text-[11px] uppercase tracking-[0.3em]">
-                          {isAvailable ? (
-                            <>
-                              <span className="text-gold underline decoration-1 underline-offset-4 transition-all duration-300 group-hover:decoration-2">
-                                View
-                              </span>
-                              <span
-                                aria-hidden
-                                className="inline-block -translate-x-2 text-gold opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
-                              >
-                                &rarr;
-                              </span>
-                            </>
-                          ) : (
-                            <span className="text-cream/40">{p.status}</span>
-                          )}
-                        </span>
-                      </div>
-                    </PlotDialog>
-                  );
-                })}
-              </div>
-
-              {/* Mobile: stacked clickable rows */}
-              <ul className="divide-y divide-cream/15 border-y border-cream/30 md:hidden">
-                {dev.plots.map((p) => {
-                  const isPrice = /^\d[\d,]*$/.test(p.status);
-                  const isAvailable =
-                    isPrice || p.status === "Price on application";
-                  return (
-                    <li key={p.plot}>
+                  {dev.plots.map((p) => {
+                    const isPrice = /^\d[\d,]*$/.test(p.status);
+                    const isAvailable =
+                      isPrice || p.status === "Price on application";
+                    return (
                       <PlotDialog
+                        key={p.plot}
                         plot={p}
                         floorplanImage={dev.floorplanImages?.[String(p.plot)]}
                         interiorImages={images.interiors}
                         developmentName={dev.name}
                       >
-                        <div className="py-5">
-                          <div className="flex items-baseline justify-between gap-4">
-                            <div className="flex items-baseline gap-3">
-                              <span className="font-mono text-[12px] tabular-nums text-gold">
-                                {String(p.plot).padStart(2, "0")}
-                              </span>
-                              <span className="text-[15px] font-medium">
-                                {p.name}
-                              </span>
-                            </div>
-                            <span className="font-mono text-[14px] tabular-nums">
-                              {isPrice
-                                ? `£${p.status}`
-                                : p.status === "Price on application"
-                                  ? "POA"
-                                  : ""}
-                            </span>
-                          </div>
-                          <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-[12px] text-cream/70">
-                            <span>
-                              {p.floor} &middot; {p.type} &middot; {p.size}
-                            </span>
+                        <div
+                          className={`${availGrid} group relative border-b border-cream/15 py-5 transition-all duration-300 ease-out hover:bg-cream/[0.05] hover:pl-4`}
+                        >
+                          <span className="font-mono text-[14px] tabular-nums text-gold transition-colors duration-300">
+                            {String(p.plot).padStart(2, "0")}
+                          </span>
+                          <span className="text-[15px] transition-transform duration-300 group-hover:translate-x-0.5">
+                            {p.name}
+                          </span>
+                          <span className="text-[13px] text-cream/70 transition-colors duration-300 group-hover:text-cream">
+                            {p.floor}
+                          </span>
+                          <span className="text-[13px] text-cream/70 transition-colors duration-300 group-hover:text-cream">
+                            {p.type}
+                          </span>
+                          <span className="font-mono text-[13px] tabular-nums">
+                            {p.size}
+                          </span>
+                          <span className="text-right font-mono text-[15px] tabular-nums">
+                            {isPrice
+                              ? `£${p.status}`
+                              : p.status === "Price on application"
+                                ? "POA"
+                                : "—"}
+                          </span>
+                          <span className="flex items-center justify-end gap-2 text-right text-[11px] uppercase tracking-[0.3em]">
                             {isAvailable ? (
-                              <span className="text-[11px] uppercase tracking-[0.3em] text-gold underline decoration-1 underline-offset-4">
-                                View details
-                              </span>
+                              <>
+                                <span className="text-gold underline decoration-1 underline-offset-4 transition-all duration-300 group-hover:decoration-2">
+                                  View
+                                </span>
+                                <span
+                                  aria-hidden
+                                  className="inline-block -translate-x-2 text-gold opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                                >
+                                  &rarr;
+                                </span>
+                              </>
                             ) : (
-                              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/40">
-                                {p.status}
-                              </span>
+                              <span className="text-cream/40">{p.status}</span>
                             )}
-                          </div>
+                          </span>
                         </div>
                       </PlotDialog>
-                    </li>
-                  );
-                })}
-              </ul>
+                    );
+                  })}
+                </div>
+
+                <ul className="divide-y divide-cream/15 border-y border-cream/30 md:hidden">
+                  {dev.plots.map((p) => {
+                    const isPrice = /^\d[\d,]*$/.test(p.status);
+                    const isAvailable =
+                      isPrice || p.status === "Price on application";
+                    return (
+                      <li key={p.plot}>
+                        <PlotDialog
+                          plot={p}
+                          floorplanImage={dev.floorplanImages?.[String(p.plot)]}
+                          interiorImages={images.interiors}
+                          developmentName={dev.name}
+                        >
+                          <div className="py-5">
+                            <div className="flex items-baseline justify-between gap-4">
+                              <div className="flex items-baseline gap-3">
+                                <span className="font-mono text-[12px] tabular-nums text-gold">
+                                  {String(p.plot).padStart(2, "0")}
+                                </span>
+                                <span className="text-[15px] font-medium">
+                                  {p.name}
+                                </span>
+                              </div>
+                              <span className="font-mono text-[14px] tabular-nums">
+                                {isPrice
+                                  ? `£${p.status}`
+                                  : p.status === "Price on application"
+                                    ? "POA"
+                                    : ""}
+                              </span>
+                            </div>
+                            <div className="mt-2 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-[12px] text-cream/70">
+                              <span>
+                                {p.floor} &middot; {p.type} &middot; {p.size}
+                              </span>
+                              {isAvailable ? (
+                                <span className="text-[11px] uppercase tracking-[0.3em] text-gold underline decoration-1 underline-offset-4">
+                                  View details
+                                </span>
+                              ) : (
+                                <span className="text-[11px] uppercase tracking-[0.3em] text-cream/40">
+                                  {p.status}
+                                </span>
+                              )}
+                            </div>
+                          </div>
+                        </PlotDialog>
+                      </li>
+                    );
+                  })}
+                </ul>
 
                 <div className="mt-12 flex flex-col items-center gap-3 sm:mt-14 sm:flex-row sm:justify-center sm:gap-5">
                   <PrimaryCTA href="#contact">Book a Viewing</PrimaryCTA>
@@ -392,7 +383,7 @@ export default async function Page({
           </section>
         )}
 
-        {/* Specification — whole section collapses under its heading */}
+        {/* Specification */}
         {dev.specification && dev.specification.length > 0 && (
           <section id="specification" className="border-b border-cream/20">
             <details className="sera-section">
@@ -434,7 +425,7 @@ export default async function Page({
           </section>
         )}
 
-        {/* The Area — whole section collapses under its heading */}
+        {/* The Area */}
         {dev.locationInfo && (
           <section id="area" className="border-b border-cream/20">
             <details className="sera-section">
@@ -500,7 +491,7 @@ export default async function Page({
           </section>
         )}
 
-        {/* FAQs — whole section collapses under its heading */}
+        {/* FAQs */}
         {dev.faqs && dev.faqs.length > 0 && (
           <section className="border-b border-cream/20">
             <details className="sera-section">
@@ -540,7 +531,7 @@ export default async function Page({
           </section>
         )}
 
-        {/* Correspondence / Contact */}
+        {/* Correspondence */}
         <section id="contact" className="bg-charcoal">
           <div className="mx-auto max-w-[1400px] px-5 py-20 sm:px-8 sm:py-32">
             <div className="border-y border-cream/30 py-14 text-center sm:py-20">
@@ -577,8 +568,6 @@ export default async function Page({
     </>
   );
 }
-
-// ---------------------------------------------------------------------------
 
 function Stat({ label, value }: { label: string; value: string }) {
   return (
